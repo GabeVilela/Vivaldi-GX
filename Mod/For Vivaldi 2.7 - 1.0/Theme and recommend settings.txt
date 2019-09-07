@@ -1,0 +1,9 @@
+There may be settings that do not work well with this modification, such as:
+- Page loading bar in address bar
+So I recommend that you disable these settings, and use the browser with the most "default" layout possible.
+
+Colors for theme:
+Background: #090411
+Foreground: #fafafa
+Highlight (In this one you are free to choose the color you want, but the color used in the previews is): #fa1e4e
+Accent: #14111a
