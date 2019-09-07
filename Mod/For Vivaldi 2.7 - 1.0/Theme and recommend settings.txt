@@ -5,5 +5,6 @@ So I recommend that you disable these settings, and use the browser with the mos
 Colors for theme:
 Background: #090411
 Foreground: #fafafa
-Highlight (In this one you are free to choose the color you want, but the color used in the previews is): #fa1e4e
+Highlight (In this one you are free to choose the color you want,
+but the color used in the previews is): #fa1e4e
 Accent: #14111a
