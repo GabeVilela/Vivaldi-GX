@@ -1,0 +1,349 @@
+:root{
+--WButtonHoverBg: #38444f;
+}
+/* ===================================================================== SECTOR START === */
+/* TOP BUTTONS */
+/* Menu icon and window buttons */
+#browser, #browser + div, #browser + div + div{
+fill: var(--colorHighlightBg) !important;
+}
+/* Window buttons hover */
+#browser .window-buttongroup>button:hover{
+fill: var(--HighlightBg) !important;
+background-color: var(--WButtonHoverBg) !important;
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Menu button*/
+/* Basic stylezation */
+.vivaldi{
+border-bottom: 1px solid var(--colorHighlightBg);
+}
+/* Menu button hover */
+.vivaldi:hover{
+background-color: var(--WButtonHoverBg) !important;
+}
+/* Menu button when theres no spacing above tabs while maximized */
+.tabs-at-edge .vivaldi{
+border-bottom: 3px solid var(--colorHighlightBg);
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* New tab button and Trash button */
+.color-behind-tabs-off .toolbar-tabbar > .button-toolbar > button{
+color: var(--colorHighlightBg) !important;
+}
+/* Trash button hover */
+.toggle-trash>button:hover{
+background-color: var(--WButtonHoverBg) !important;
+border-radius: 0px;
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* New tab button */
+/* Basic stylezation */
+.newtab>button,.newtab{
+border-radius: 0px !important;
+    border-bottom: 1px solid var(--colorHighlightBg);
+}
+/* Hover */
+.newtab>button:hover{
+background-color: var(--WButtonHoverBg) !important;
+border: none !important;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ===================================================================== SECTOR END === */
+/* ===================================================================== SECTOR START === */
+/* TABS */
+/* Non active tab bottom line */
+.tab:not(.tab-group){
+border-bottom: 1px solid var(--colorHighlightBg);
+}
+/* Non active tab stacks */
+.tab.tab-group{
+border-bottom: 3px solid var(--colorHighlightBg);
+}
+/* Active tab */
+.tab-position .tab.active:not(.tab-group){
+border-top: 1px solid var(--colorHighlightBg);
+border-left: 1px solid var(--colorHighlightBg);
+border-right: 1px solid var(--colorHighlightBg);
+border-bottom: none;
+}
+/* Close tab button */
+.close{
+display: inline-block !important;
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Active tab stack */
+/* Normal window */
+.tab-position .tab.active.tab-group{
+border-left: 1px solid var(--colorHighlightBg);
+border-right: 1px solid var(--colorHighlightBg);
+border-bottom: none;
+}
+/* Maximized window */
+.maximized .tab-position .tab.active.tab-group .active{
+border-top: 1px solid var(--colorHighlightBg);
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* Active indicator inside active tab stack */
+.tab.active .tab-indicator.active{
+border-left: 1px solid var(--colorHighlightBg);
+border-right: 1px solid var(--colorHighlightBg);
+border-top: 2px solid var(--colorHighlightBg);
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Non active indicator inside active tab stack */
+/* Normal window */
+.tab-position .tab.active.tab-group .tab-indicator:not(.active){
+border: 1px solid var(--colorHighlightBg);
+border-top: 2px solid var(--colorHighlightBg);
+}
+/* Maximized window */
+.maximized .tab-position .tab.active.tab-group .tab-indicator:not(.active){
+border-top: 1px solid var(--colorHighlightBg);
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* Non active indicator inside active tab stack */
+.tab-position .tab.active.tab-group .tab-indicator:not(.active):hover{
+background-color: var(--WButtonHoverBg);
+padding: 0px;
+}
+/* Hover non active indicator inside non active tab stack */
+.tab-position .tab:not(.active).tab-group .tab-indicator:hover{
+background-color: transparent;
+}
+/* Unread mark */
+.tab-position .tab.unread{
+background-image:linear-gradient(0deg, var(--colorHighlightBgAlpha) -5px, transparent 26px);
+}
+/* Every tab indicator */
+.tab-indicator{
+height: 11px;
+background-color: transparent !important;
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Tab stacks while "remove spacing above tabs while maximized" is enabled and window is maximized */
+/* Tab indicator */
+.maximized.tabs-at-edge .tab-indicator{
+height: 7px;
+}
+/* Icon */
+.maximized.tabs-at-edge .tab-group .favicon.jstest-favicon-image img{
+width: 12px;
+height: 12px;
+margin-top: 3px;
+}
+/* Loading icons */
+.maximized.tabs-at-edge .tab-group .favicon:not(.jstest-favicon-image){
+width: 12px;
+height: 12px;
+margin-top: 4px;
+}
+/* Title */
+.maximized.tabs-at-edge .tab-group .title{
+margin-top: 3px;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Tab loading bar */
+/* When tab is active */
+.tab-position .tab.active .progress-indicator{
+background-color: var(--colorHighlightBg);
+height:1px;
+}
+/* When tab isn't active */
+.tab-position .tab:not(.active) .progress-indicator{
+background-color: var(--WButtonHoverBg);
+height:2px;
+}
+/* When tab stack isn't active */
+.tab-position .tab:not(.active).tab-group .progress-indicator{
+height:4px;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* Active tab icon */
+.theme-dark .tab-position .tab.active .tab-header .favicon{
+filter:none !important;
+}
+/* Non active tabs & tab stacks */
+.tab-position .tab:not(.active){
+color: var(--colorAccentFgFaded) !important;
+fill:var(--colorAccentFgFaded) !important;
+}
+/* ===================================================================== SECTOR END === */
+/* ===================================================================== SECTOR START === */
+/* ADDRESS BAR */
+/* Page control buttons hover */
+.toolbar-addressbar .button-toolbar>button:hover{
+background-color: #100e15 !important;
+}
+/* Address field and Search field buttons and text */
+.addressfield, .searchfield{
+fill: inherit !important;
+color: inherit !important;
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Address field */
+/* Bar stylezation */
+.addressfield, .addressfield form input.url{
+background-color: var(--colorAccentBg) !important;
+border: none !important;
+}
+/* Bar hover */
+.addressfield:hover{
+background-color: var(--colorHighlightBgAlpha) !important;
+border: none !important;
+box-shadow: none;
+}
+/* Bar focus */
+.addressfield:focus-within{
+background-color: var(--colorBg) !important;
+border: none !important;
+box-shadow: none;
+}
+/* I personally don't remember why I added this */
+.addressfield .addressfield-siteinfo .siteinfo-ssl-issuer {
+display: none !important;
+}
+/* Text selection in Address bar */
+.url::selection {
+background-color: var(--colorHighlightBg) !important;
+color: rgb(0,0,0) !important;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Address field inside buttons */
+/* Bookmark button when page is saved */
+.bookmark-animated-fill{
+fill: var(--colorAccentFg) !important;
+}
+/* Hover when not pressed */
+.toolbar-insideinput>div>button:hover:not(.button-pressed){
+border:none !important;
+border-radius: 0px !important;
+background-color: hsla(0, 0%, 100%, 0.22) !important;
+}
+/* When pressed */
+.toolbar-insideinput>div>.button-pressed{
+background-color: #6f7e85 !important;
+border: none !important;
+}
+/* Hover when is pressed */
+.toolbar-insideinput>div>.button-pressed:hover{
+background-color: #8b989e !important;
+border: none !important;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Search field */
+/* Basic Stylezation */
+.iconmenu-container,.searchfield{
+background-color: var(--colorAccentBg) !important;
+border: none !important;
+}
+/* Hover */
+.iconmenu-container:hover,.searchfield:hover{
+background-color: var(--colorHighlightBgAlpha) !important;
+border: none !important;
+box-shadow: none;
+}
+/* Focus with-in */
+.iconmenu-container:focus-within,.searchfield:focus-within{
+background-color: var(--colorBg) !important;
+border: none !important;
+box-shadow: none !important;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Dropdown */
+/* Basic stylezation */
+.OmniDropdown {
+box-shadow: none;
+background-color: #06030d !important;
+color: var(--colorFg);
+fill: var(--colorFg);
+}
+/* Dropdown item hover on non highlighted item */
+.OmniLinkItem:not(.OmniLinkItem--Highlighted):hover {
+background-color: var(--colorHighlightBgAlpha);
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ===================================================================== SECTOR END === */
+/* ===================================================================== SECTOR START === */
+/* BOOKMARK BAR */
+/* Basic bar stylezation */
+.bookmark-bar{
+background-color: var(--colorAccentBg);
+height:40px;
+box-shadow: none !important;
+border:none !important;
+}
+/* ++++++++++++++++ BLOCK START ++++++++++++++++++++ */
+/* Bookmark bar items */
+/* Basic stylezation */
+.bookmarkbarItem{
+border-radius: 0px !important;
+margin: 4px 0px !important;
+}
+/* Items itself */
+.bookmark-bar button {
+background-color: var(--colorAccentBg) !important;
+}
+/* Hover */
+.bookmarkbarItem:hover{
+background-color: var(--WButtonHoverBg) !important;
+}
+/* Space between bookmark bar and address bar */
+.address-top .toolbar-mainbar:after {
+height: unset;
+}
+/* ++++++++++++++++ BLOCK END ++++++++++++++++++++ */
+/* ===================================================================== SECTOR END === */
+/* ===================================================================== SECTOR START === */
+/* SIDEBAR */
+/* Basic stylezation */
+#panels-container,#panels-container.left #switch,#switch > button:focus:not(active){
+background-color: var(--colorBg) !important;
+box-shadow: none !important;
+border-right: 1px solid var(--colorHighlightBg) !important;
+}
+/* Buttons hover */
+#switch button:hover{
+background-color: var(--colorBg) !important;
+padding-left: 4px !important;
+}
+/* Pressed button */
+#switch > button.active{
+background-color: var(--colorBg) !important;
+border: none !important;
+}
+/* Add webpanel button */
+#switch .addwebpanel-wrapper > button, #switch > button {
+fill: var(--colorHighlightBg) !important;
+}
+/* Webpanels icons */
+.theme-dark #switch button.webviewbtn img{
+background-color: transparent !important;
+border-radius: 0px !important;
+}
+/* ===================================================================== SECTOR END === */
+/* ===================================================================== SECTOR START === */
+/* STATUS BAR */
+/* Basic stylezation */
+.toolbar-statusbar{
+background-color: var(--colorBg) !important;
+border-top:1px solid var(--colorHighlightBg) !important;
+}
+/* Buttons stylezation */
+.toolbar-statusbar>div>button{
+fill: var(--colorHighlightBg);
+}
+/* Button pressed */
+.toolbar-statusbar .button-toolbar > button.button-pressed{
+    background-color: transparent;
+}
+/* Buttons hover */
+.toolbar-statusbar>.button-toolbar>button:hover{
+padding-bottom: 4px;
+background-color: var(--colorBg) !important;
+}
+/* ===================================================================== SECTOR END === */
