@@ -7,8 +7,8 @@ A custom UI mod for Vivaldi Browser, based on Opera GX
 <li>Next, here in this page, open Mod folder, then open the folder corresponding with you Vivaldi version.</li>
 <li>You'll get some variations of the mod, open one of them, copy everything and paste inside a notepad app, then, save it as style.css</li>
 </ol>
-The location of the file "style.css" MUST be in the same folder as you choosed in step 1
-PRO Tip: Read the text files inside the folders, they contain some important information about each mod version.
+The location of the file "style.css" MUST be in the same folder as you choosed in step 1.
+<br>PRO Tip: Read the text files inside the folders, they contain some important information about each mod version.
 <hr>
 <h2>Who is the creator of this?</h2>
 Me, Gabriel Vilela. A braziliam TI student, at the moment, doing graduation in "Information Systems".
