@@ -1,4 +1,5 @@
-About the two .css files, the standard one will "connect" the tab line to sidebar and status bar, but it looks awful if you hide the sidebar.
+About the two .css files, the standard one will "connect" the tab line to sidebar and status bar, but it
+looks awful if you hide the sidebar.
 The other one, I left it all "unconnected", ideally if you usually hide the sidebar.
 After choosing one of them, you must save it with the name "style.css"
 
@@ -14,7 +15,8 @@ Colors for theme:
 > Accent: #14111a
 
 Theme settings:
-> Accent color from active page: by default, I leave it unchecked, but you can turn it on (it won't colorize the tab lines).
+> Accent color from active page: by default, I leave it unchecked, but you can turn it on (it won't colorize
+the tab lines).
 > Apply accent color to window: unchecked
 > Transparent Tabs: checked.
 > Corner rounding: 5px
