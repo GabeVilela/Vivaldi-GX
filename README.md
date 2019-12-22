@@ -3,6 +3,18 @@ A custom UI mod for Vivaldi Browser, based on Opera GX
 <hr>
 <h2>Changelog</h2>
 <ul>
+  <li>V1.3 - Minor improvements
+    <ul>
+      <li>Changed a few more icons</li>
+      <li>Fixed a bug with a small 1px line in the left side of Sidebar</li>
+      <li>Reverted floating side panels. Now it comes disabled by default, but can enable it again.</li>
+      <li>Settings stylezation was improved</li>
+      <li>Improved the stylezation on browser's side panels</li>
+      <li>Various pop-up dialogs got stylezed</li>
+      <li>Browser pages now have a colored icon - Thanks Tam</li>
+      <li>Reverted the transitions added. Can be re-enabled in the code</li>
+    </ul>
+  </li>
   <li>V1.2 - Alot of improvements were made in this release
     <ul>
       <li>Color accent from websites change the colors of the UI icons</li>
