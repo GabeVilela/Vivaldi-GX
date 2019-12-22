@@ -3,6 +3,26 @@ A custom UI mod for Vivaldi Browser, based on Opera GX
 <hr>
 <h2>Changelog</h2>
 <ul>
+  <li>V1.4 - The last update of the decade
+    <ul>
+      <li>Redesign of the sidebar. Now, it is scrollable</li>
+      <li>Redesign of tabs</li>
+      <li>Re-enabled extra tansitions by default</li>
+      <li>Dropped a few settings<br/>
+        The following things were removed.
+        <ul>
+          <li>$disableFixedSidebar</li>
+          <li>$operaFloatingPanel</li>
+          <li>$operaFloatingPanelDownMargin</li>
+          <li>$statusbarOnRightCorner</li>
+        </ul>
+      </li>
+      <li>Hibernated tabs have "zZz" over their icon</li>
+      <li>Pop-up windows have "Vivaldi" suffix in their title</li>
+      <li>Many other minor UI improvements</li>
+      <li>Added Santa Claus as menu icon</li>
+    </ul>
+  </li>
   <li>V1.3 - Minor improvements
     <ul>
       <li>Changed a few more icons</li>
