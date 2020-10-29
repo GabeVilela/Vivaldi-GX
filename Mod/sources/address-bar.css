@@ -1,0 +1,436 @@
+div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
+  margin-left: 40px;
+  border-left: 1px solid var(--colorHighlightBg) !important;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.UrlBar.toolbar-mainbar.toolbar-large .toolbar:first-child button:hover, .UrlBar.toolbar-mainbar>.button-toolbar>button:hover, .UrlBar.toolbar-mainbar>.toolbar-extensions button:hover {
+  background-color: #100e15 !important;
+  background-image: none !important;
+}
+
+.address-top .toolbar-mainbar:after{
+  content: none !important;
+}
+
+.toolbar-addressbar .button-toolbar>button:active, .toolbar-mainbar>.button-toolbar>button.button-pressed {
+  background-color: #0e0c12 !important;
+  background-image: none !important;
+}
+
+.UrlBar-AddressField, .searchfield {
+  fill: inherit !important;
+  color: inherit !important;
+}
+
+.UrlBar-AddressField, .UrlBar-AddressField form input.url,.UrlBar-SearchField {
+  background-color: var(--colorAccentBg) !important;
+  border: none !important;
+  height: 27px !important;
+}
+
+.UrlField {
+  font-size: 14px !important;
+}
+
+.UrlBar-AddressField:hover,
+.UrlBar-SearchField:hover {
+  background-color: var(--colorHighlightBgAlpha) !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.UrlBar-AddressField:focus-within,
+.UrlBar-SearchField:focus-within {
+  background-color: var(--colorAccentBgFaded) !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.UrlBar-AddressField .UrlBar-AddressField-siteinfo .siteinfo-ssl-issuer {
+  display: none !important;
+}
+
+.UrlBar-AddressField .create-bookmark #addBookmarkPath path {
+  d: path("M12.52,1.12A3.843,3.843,0,0,0,8,3.13,3.843,3.843,0,0,0,3.48,1.12C1.1,1.71-.38,4.02.09,7.11c.28,1.9,1.7,3.7,3.97,5.49.56.44,1.13.86,1.72,1.26.24.16.48.32.76.51l.63.41a1.5,1.5,0,0,0,1.67,0l.62-.41c.29-.19.52-.35.76-.51.59-.4,1.16-.82,1.72-1.26,2.27-1.79,3.69-3.59,3.97-5.49C16.38,4.01,14.9,1.71,12.52,1.12Z");
+}
+
+.UrlBar-AddressField .create-bookmark g[clip-path="url(#addBookmarkPath)"] path.bookmark-animated-fill {
+  d: path("M12.52,1.12A3.843,3.843,0,0,0,8,3.13,3.843,3.843,0,0,0,3.48,1.12C1.1,1.71-.38,4.02.09,7.11c.28,1.9,1.7,3.7,3.97,5.49.56.44,1.13.86,1.72,1.26.24.16.48.32.76.51l.63.41a1.5,1.5,0,0,0,1.67,0l.62-.41c.29-.19.52-.35.76-.51.59-.4,1.16-.82,1.72-1.26,2.27-1.79,3.69-3.59,3.97-5.49C16.38,4.01,14.9,1.71,12.52,1.12Z");
+}
+
+.UrlBar-AddressField .create-bookmark g[clip-path="url(#addBookmarkPath)"] path.bookmark-outline {
+  d: path("M8.4,4.54a.41.41,0,0,1-.809,0A3.073,3.073,0,0,0,3.678,1.906C1.716,2.39.492,4.3.895,6.992c.248,1.645,1.557,3.3,3.675,4.978q.816.642,1.675,1.224c.234.159.465.314.745.5l.63.415a.687.687,0,0,0,.76,0l.63-.415c.278-.184.511-.339.745-.5q.86-.581,1.675-1.224c2.118-1.679,3.424-3.336,3.675-4.977.4-2.688-.822-4.6-2.783-5.086A3.073,3.073,0,0,0,8.4,4.54Zm4.115-3.424c2.379.589,3.863,2.9,3.4,5.994-.284,1.9-1.708,3.7-3.973,5.493q-.839.66-1.722,1.258c-.237.162-.473.32-.755.506l-.629.414a1.512,1.512,0,0,1-1.668,0l-.629-.414c-.282-.186-.518-.343-.755-.506q-.883-.6-1.722-1.258C1.793,10.809.37,9.012.085,7.111-.379,4.017,1.1,1.707,3.479,1.118A3.854,3.854,0,0,1,8,3.127a3.852,3.852,0,0,1,4.52-2.009Z");
+}
+
+.toolbar.toolbar-small.toolbar-insideinput {
+  margin-top: 2px;
+}
+
+.create-bookmark button.button-on svg {
+  stroke: var(--colorHighlightBg);
+}
+
+.create-bookmark button svg {
+  fill: #d3d8db !important;
+  stroke: #d3d8db;
+  stroke-width: 0.8px;
+  stroke-opacity: 0.5;
+}
+
+.create-bookmark button svg path.add-bookmark-shadow {
+  display: none !important;
+}
+
+.url::selection {
+  background-color: var(--colorAccentBg) !important;
+  color: var(--colorAccentFg) !important;
+}
+
+/* Changing screenshot button icon's camera - $mainbarNewCameraIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M10.5 6C9.11929 6 8 7.11929 8 8.5C8 8.77614 7.77614 9 7.5 9H7C5.34315 9 4 10.3431 4 12V17C4 18.6569 5.34315 20 7 20H19C20.6569 20 22 18.6569 22 17V12C22 10.3431 20.6569 9 19 9H18.5C18.2239 9 18 8.77614 18 8.5C18 7.11929 16.8807 6 15.5 6H10.5ZM10 8.5C10 8.22386 10.2239 8 10.5 8H15.5C15.7761 8 16 8.22386 16 8.5C16 9.88071 17.1193 11 18.5 11H19C19.5523 11 20 11.4477 20 12V17C20 17.5523 19.5523 18 19 18H7C6.44772 18 6 17.5523 6 17V12C6 11.4477 6.44772 11 7 11H7.5C8.88071 11 10 9.88071 10 8.5Z"] {
+  d: path("M18.925,8.51H17.106a.877.877,0,0,1-.617-.254L14.725,6.51h-3.44L9.521,8.256A.877.877,0,0,1,8.9,8.51H7.085a1.069,1.069,0,0,0-1.07,1.06v8.86a1.06,1.06,0,0,0,1.06,1.06h11.85a1.061,1.061,0,0,0,1.06-1.06V9.57A1.063,1.063,0,0,0,18.925,8.51Zm.06,9.92-.06.06-11.91-.06.06-7.28v-.47l.01-1.17,1.17.01H9.3a.877.877,0,0,0,.614-.251l.774-.759,1.02-1h2.6l1.02,1,.814.8a.877.877,0,0,0,.615.251h1.061l1.17.01Z");
+}
+
+.toolbar-addressbar path[d="M13 16C14.1046 16 15 15.1046 15 14C15 12.8954 14.1046 12 13 12C11.8954 12 11 12.8954 11 14C11 15.1046 11.8954 16 13 16Z"] {
+  d: path("M12.991,11.525a2.019,2.019,0,1,1-2.019,2.019,2.021,2.021,0,0,1,2.019-2.019m0-1a3.019,3.019,0,1,0,3.019,3.019,3.019,3.019,0,0,0-3.019-3.019Z");
+}
+
+/* Changing next page icon  - $mainbarNewNextPageIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M9.29289 19.2929C8.90237 19.6834 8.90237 20.3166 9.29289 20.7071C9.68342 21.0976 10.3166 21.0976 10.7071 20.7071L18.4142 13L10.7071 5.29289C10.3166 4.90237 9.68342 4.90237 9.29289 5.29289C8.90237 5.68342 8.90237 6.31658 9.29289 6.70711L15.5858 13L9.29289 19.2929Z"] {
+  d: path("M16.8,13l-7-7-.7.7,6.2,6.2a.1.1,0,0,1,0,.1L9.2,19.3l.7.7,7-7h0Z");
+}
+
+/* Changing back page icon - $mainbarNewBackPageIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M15.2929 20.7071C15.6834 21.0976 16.3166 21.0976 16.7071 20.7071C17.0976 20.3166 17.0976 19.6834 16.7071 19.2929L10.4142 13L16.7071 6.70711C17.0976 6.31658 17.0976 5.68342 16.7071 5.29289C16.3166 4.90237 15.6834 4.90237 15.2929 5.29289L7.58575 13L15.2929 20.7071Z"] {
+  d: path("M9.2,13l7-7,.7.7-6.2,6.2a.1.1,0,0,0,0,.1l6.2,6.2-.7.7-7-7h0Z");
+}
+
+/* Changing previous domain - $mainbarNewBackDomainIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8V12L15.2929 7.70711C15.9229 7.07714 17 7.52331 17 8.41421V17.5858C17 18.4767 15.9229 18.9229 15.2929 18.2929L11 14V18C11 18.5523 10.5523 19 10 19C9.44772 19 9 18.5523 9 18V8Z"] {
+  d: path("M16,6h0L9,13H9l7,7h1V6Zm-5.5,7.1a.1.1,0,0,1,0-.1L16,7.4V18.6Z");
+}
+
+/* Changing next domain - $mainbarNewNextDomainIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M17 18C17 18.5523 16.5523 19 16 19C15.4477 19 15 18.5523 15 18L15 14L10.7071 18.2929C10.0771 18.9229 9 18.4767 9 17.5858L9 8.41421C9 7.52331 10.0771 7.07714 10.7071 7.70711L15 12L15 8C15 7.44772 15.4477 7 16 7C16.5523 7 17 7.44771 17 8L17 18Z"] {
+  d: path("M9,6V20h1l7-7h0L10,6H9Zm1,12.5V7.4l5.5,5.5a.1.1,0,0,1,0,.1Z");
+}
+
+/* Changing refresh icon - $mainbarNewRefreshIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M20 6.20711C20 5.76166 19.4614 5.53857 19.1464 5.85355L17.2797 7.72031C16.9669 7.46165 16.632 7.22741 16.2774 7.02069C14.7393 6.12402 12.9324 5.80372 11.1799 6.1171C9.4273 6.43048 7.84336 7.35709 6.71134 8.73121C5.57932 10.1053 4.97303 11.8373 5.00092 13.6175C5.02881 15.3976 5.68905 17.1098 6.86356 18.4478C8.03807 19.7858 9.65025 20.6623 11.4118 20.9206C13.1733 21.179 14.9693 20.8022 16.4785 19.8578C17.5598 19.1812 18.4434 18.2447 19.0553 17.1439C19.0803 17.099 19.1048 17.0538 19.1288 17.0084C19.1844 16.9033 19.2376 16.7968 19.2883 16.689C19.5213 16.193 19.2261 15.6315 18.7038 15.466C18.2666 15.3274 17.81 15.5117 17.5224 15.8594C17.4823 15.9079 17.4455 15.9596 17.4125 16.014C17.3994 16.0356 17.3869 16.0576 17.375 16.0801C16.9237 16.9329 16.2535 17.6577 15.4259 18.1757C14.3159 18.8702 12.9951 19.1473 11.6997 18.9573C10.4042 18.7673 9.21861 18.1227 8.35485 17.1387C7.49109 16.1547 7.00554 14.8955 6.98503 13.5864C6.96452 12.2772 7.41039 11.0035 8.24291 9.99293C9.07542 8.98238 10.2403 8.30093 11.5291 8.07047C12.818 7.84001 14.1468 8.07556 15.278 8.73499C15.4839 8.85508 15.6809 8.9878 15.868 9.13202L13.8536 11.1464C13.5386 11.4614 13.7617 12 14.2071 12H20V6.20711Z"] {
+  d: path("M15.2,10.8h4.2V6.3h-1V9a6.6,6.6,0,1,0,.9,6.5l-.9-.4a5.6,5.6,0,1,1-.6-5.3H15.2Z");
+}
+
+/* Changing cancel load icon - $mainbarNewCancelLoadIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L11.5858 13L7.29289 17.2929C6.90237 17.6834 6.90237 18.3166 7.29289 18.7071C7.68342 19.0976 8.31658 19.0976 8.70711 18.7071L13 14.4142L17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L14.4142 13L18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289C18.3166 6.90237 17.6834 6.90237 17.2929 7.29289L13 11.5858L8.70711 7.29289Z"] {
+  d: path("M17.9,17.2l-4.1-4.1a.1.1,0,0,1,0-.1l4.1-4.1-.7-.7-4.1,4.1h-.1L8.8,8.1l-.7.7,4.1,4.1a.1.1,0,0,1,0,.1L8.1,17.2l.7.7,4.1-4.1h.1l4.1,4.1Z");
+}
+
+/* Changing homepage icon - $mainbarNewHomepageIcon */
+
+.toolbar-mainbar .button-toolbar svg path[d="M14.0607 5.14645C13.4749 4.56066 12.5251 4.56066 11.9393 5.14645L5.43934 11.6464C5.15804 11.9278 5 12.3093 5 12.7071V19.5C5 20.3284 5.67157 21 6.5 21H10.5C11.3284 21 12 20.3284 12 19.5V16.073C12.0032 16.0667 12.0072 16.0593 12.012 16.0508C12.0486 15.9868 12.1157 15.898 12.216 15.8084C12.4164 15.6296 12.6873 15.5 13 15.5C13.3127 15.5 13.5836 15.6296 13.784 15.8084C13.8843 15.898 13.9514 15.9868 13.988 16.0508C13.9928 16.0593 13.9968 16.0667 14 16.073V19.5C14 20.3284 14.6716 21 15.5 21H19.5C20.3284 21 21 20.3284 21 19.5V12.7071C21 12.3093 20.842 11.9278 20.5607 11.6464L14.0607 5.14645ZM7 12.9142L13 6.91421L19 12.9142V19H16V16C16 15.6363 15.8655 15.3053 15.7245 15.0586C15.5736 14.7944 15.3657 14.5395 15.116 14.3166C14.6164 13.8704 13.8873 13.5 13 13.5C12.1127 13.5 11.3836 13.8704 10.884 14.3166C10.6343 14.5395 10.4264 14.7944 10.2755 15.0586C10.1345 15.3053 10 15.6363 10 16V19H7V12.9142Z"] {
+  d: path("M13.6,6.9l-.3-.3L13,6.3l-.3.3h0L6.6,12.7v7.1h4.9V15.5l.8-.8h1.2l.8.8v4.3h4.9V12.7Zm4.9,12H15.3V15.1L14,13.8H12l-1.3,1.3v3.8H7.5V13L13,7.5,18.5,13Z");
+}
+
+/* * */
+
+.toolbar-mainbar.toolbar-extensions .extensionPopupIcons path {
+  d: path("M16.786,12.794,13.523,9.531l-.707.707,2.556,2.557a.283.283,0,0,1,.074.178l-2.389.011a.286.286,0,0,0-.078-.19L9.715,9.531l-.707.707,2.556,2.557a.291.291,0,0,1,0,.411L9.008,15.762l.707.707,3.263-3.264a.282.282,0,0,0,.079-.221l2.389-.012a.278.278,0,0,1-.074.233l-2.556,2.557.707.707,3.263-3.264A.291.291,0,0,0,16.786,12.794Z");
+}
+
+.UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea, .UrlBar-AddressField .addbookmark-cardwrapper .cardview input {
+  background-color: var(--colorAccentBg) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea:focus-within, .UrlBar-AddressField .addbookmark-cardwrapper .cardview input:focus-within {
+  background-color: var(--colorBg) !important;
+}
+
+.UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea:not(:focus-within):hover, .UrlBar-AddressField .addbookmark-cardwrapper .cardview input:not(:focus-within):hover {
+  background-color: var(--colorAccentBgAlpha) !important;
+}
+
+.UrlBar-AddressField .addbookmark-cardwrapper .cardview select {
+  border: none !important;
+}
+
+button.button-on .bookmark-animated-fill, button.button-on .bookmark-outline {
+  fill: var(--colorHighlightBg) !important;
+}
+
+.UrlBar-AddressField::before, .UrlBar-AddressField::after {
+  content: var(--verticalEllipsis) !important;
+  background-color: transparent !important;
+  height: 28px !important;
+  position: static !important;
+  width: unset !important;
+  z-index: 1 !important;
+  bottom: inherit !important;
+  left: inherit !important;
+  right: inherit !important;
+  color: #2e2937 !important;
+  font-size: 19px !important;
+}
+
+.UrlBar-AddressField:hover::before, .UrlBar-AddressField:hover::after, .UrlBar-AddressField:focus-within::before, .UrlBar-AddressField:focus-within::after {
+  color: transparent !important;
+}
+
+.toolbar-insideinput button:hover:not(.button-pressed) {
+  border: none !important;
+  border-radius: 0px !important;
+  background-color: hsla(0, 0%, 100%, 0.22) !important;
+}
+
+.button-popup-wrapper, .button-popup-wrapper .UrlBar-AddressField-popup-header, #modal-bg, #modal-bg .dialog-header, #modal-bg .dialog-content, #modal-bg .dialog-footer {
+  background-color: #19171f !important;
+  border: none !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"]:not(.primary), #modal-bg input[type="submit"] {
+  background-color: var(--colorAccentBg) !important;
+  background-image: linear-gradient(45deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2)) !important;
+  border: 1px solid var(--colorAccentBg) !important;
+  color: #faf6ec !important;
+  border-radius: 3px !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"]:not(.primary):hover, #modal-bg input[type="submit"]:hover {
+  background-image: none !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"].primary, #modal-bg input[type="button"] {
+  background-color: #2a343d !important;
+  background-image: none !important;
+  border: 1px solid #3e4852 !important;
+  color: #ffffff !important;
+  border-radius: 3px !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"].primary:hover, #modal-bg input[type="button"]:hover {
+  background-color: #3e4852 !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content section, #modal-bg .dialog-footer {
+  text-align: right;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-header h1 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.toolbar-addressbar .searchfield .toolbar-insideinput:not(.SearchEngineSelect-Icon) button {
+  margin-right: 5px !important;
+}
+
+.toolbar-insideinput>div>.button-pressed {
+  background-color: #6f7e85 !important;
+  border: none !important;
+}
+
+.toolbar-insideinput>div>.button-pressed:hover {
+  background-color: #8b989e !important;
+  border: none !important;
+}
+
+.SiteInfoButton, .SiteInfoButton-SearchEngineFavicon {
+  height: 17px !important;
+  width: 16px !important;
+  margin-left: 22px !important;
+  margin-top: 0px !important;
+  border-radius: 0px !important;
+  border-width: 0px !important;
+  background-color: transparent !important;
+}
+
+.SiteInfoButton:hover {
+  background-color: hsla(0, 0%, 100%, 0.22) !important;
+}
+
+.SiteInfoButton.secure, .SiteInfoButton.certified {
+  fill: #8beb84 !important;
+  color: #8beb84 !important;
+}
+
+.button-addressfield.SiteInfoButton.internal svg {
+  fill: var(--colorAccentBg) !important;
+  padding-left: 1px;
+}
+
+.button-addressfield.SiteInfoButton.secure:hover {
+  fill: #a0eb9b !important;
+}
+
+.SiteInfoButton-SearchEngineFavicon, .SiteInfoButton-SecurityBadge {
+  width: 16px !important;
+}
+
+.UrlBar-AddressField .SiteInfoButton.secure .SiteInfoButton-SecurityBadge path {
+  d: path("M12.5,6.5H11V3.771l-.029-.17A3.247,3.247,0,0,0,8,1.5,3.129,3.129,0,0,0,5.237,3.172a1.648,1.648,0,0,0-.207.811L5.019,6.5H3.5A.5.5,0,0,0,3,7v7a.5.5,0,0,0,.5.5h9A.5.5,0,0,0,13,14V7A.5.5,0,0,0,12.5,6.5ZM6,4.346A1.65,1.65,0,0,1,6.359,3.3a2.095,2.095,0,0,1,3.282,0A1.649,1.649,0,0,1,10,4.346V6.5H6Z");
+}
+
+.UrlBar-AddressField .SiteInfoButton:not(.internal).insecure .SiteInfoButton-SecurityBadge path {
+  d: path("M12.5,6.5H6V4.341A1.624,1.624,0,0,1,6.36,3.3a2.078,2.078,0,0,1,2.14-.73l.78-.77a3.05,3.05,0,0,0-4.04,1.37,1.658,1.658,0,0,0-.21.81L5.02,6.5H3.5A.5.5,0,0,0,3,7v7a.5.5,0,0,0,.5.5h9A.5.5,0,0,0,13,14V7A.5.5,0,0,0,12.5,6.5Z");
+}
+
+.SiteInfoButton.insecure {
+  fill: #d42d2d;
+}
+
+.SiteInfoButton.insecure:hover svg {
+  fill: inherit !important;
+}
+
+.UrlBar-UrlFieldWrapper .observer .UrlField input {
+  padding-left: 18px !important;
+  margin-top: 0px !important;
+  padding-top: 5px !important;
+}
+
+.toolbar-mainbar .searchfield-input {
+  margin-top: -2px !important;
+  padding-top: 0;
+}
+
+.searchfield-input::selection {
+  background-color: var(--colorAccentBg) !important;
+  color: var(--colorAccentFg) !important;
+}
+
+.toolbar-mainbar .toolbar-insideinput.SearchEngineSelect-Icon {
+  margin-top: 0.5px !important;
+  margin-left: 8px !important;
+}
+
+.OmniDropdown {
+  box-shadow: none;
+  background-color: var(--GXfocusAddressbar) !important;
+  color: var(--colorFg);
+  fill: var(--colorFg);
+}
+
+.OmniLinkItem--Highlighted {
+  color: var(--colorAccentFg);
+  fill: var(--colorAccentFg);
+  background-color: var(--colorAccentBg);
+}
+
+.OmniLinkItem--Highlighted:hover {
+  color: var(--colorAccentFg);
+  fill: var(--colorAccentFg);
+  background-color: var(--colorAccentBgFaded);
+}
+
+.OmniLinkItem:not(.OmniLinkItem--Highlighted):hover {
+  background-color: var(--colorAccentBgAlpha);
+}
+
+.account-dialog {
+  margin: 8px;
+}
+
+.account-dialog, .account-dialog header, .account-dialog footer {
+  background-color: var(--colorAccentBg) !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.account-dialog header {
+  border-bottom: 1px solid #333435 !important;
+}
+
+.account-dialog footer {
+  border-top: 1px solid #333435 !important;
+}
+
+.account-dialog .account-item>svg {
+  background-color: transparent !important;
+}
+
+.account-dialog>button {
+  margin-bottom: 8px;
+}
+
+.toolbar .profile-popup+.toolbar-extensions .button-toolbar:not(.button-narrow):first-of-type:before {
+  opacity: 1 !important;
+  background: #8c8d8f !important;
+  margin-top: 3px !important;
+  height: 16px !important;
+}
+
+.toolbar-extensions .HiddenToggleExtensionIcon {
+  background-color: var(--colorAccentBg) !important;
+}
+
+.UrlBar-AddressField .OmniDropdown {
+  top: 22px;
+}
+
+.omni-clickable.OmniLinkItem.OmniLinkItem {
+  height: 36px !important;
+}
+
+.ignore-react-onclickoutside.OmniDropdown::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.omni-clickable.OmniLinkItem[data-url^="http"]:not(.OmniLinkItem--SingleValue) {
+  color: #99ddff !important;
+}
+
+span.OmniLinkItem-Details {
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+.omni-clickable.OmniLinkItem:hover span.OmniLinkItem-Details, .omni-clickable.OmniLinkItem--Highlighted span.OmniLinkItem-Details {
+  opacity: 1;
+}
+
+.omni-clickable.OmniLinkItem:not(:hover):not(.OmniLinkItem--Highlighted) .OmniLinkItem-Favicon img {
+  filter: grayscale(1) contrast(0.2) brightness(1.5);
+}
+
+.UrlBar-AddressField>.toolbar-insideinput:first-child, .UrlBar-AddressField>.toolbar-insideinput:nth-child(2) {
+  position: absolute;
+  right: 33px;
+  z-index: 2;
+}
+.toolbar-small.toolbar-insideinput .button-toolbar:last-child {
+    margin-left: 28px;
+}
+
+.UrlBar-UrlFieldWrapper .UrlField>.UrlFragment-Wrapper {
+  margin-top: 0px !important;
+  padding-top: 5px !important;
+  padding-left: 18px !important;
+}
+progress.pageload-indicator::-webkit-progress-value {
+    background-color: var(--colorAccentBg) !important;
+    border-radius: 0px !important;
+  }
+  
+  progress.pageload-indicator {
+    opacity: 0.2 !important;
+    height: 100% !important;
+    margin: 0px !important;
+    margin-top: -1px !important;
+    border-radius: var(--radius) !important;
+    background-color: transparent !important;
+  }
+  
+  .pageload.progress-done .pageload-indicator[value="100"] {
+    opacity: 0.0 !important;
+    transition: 0.5s;
+  }

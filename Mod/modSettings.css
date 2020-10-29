@@ -1,0 +1,11 @@
+/*
+    Welcome, this file contains many stuff that you can toggle on/off
+    To switch something off, just delete it (or turn it into a commentary, if you know how)
+*/
+
+/* This one is essential, don't remove it */
+@import 'sources/vars.css';
+/* --- */
+@import 'sources/address-bar.css';
+@import 'sources/tab-bar.css';
+@import 'sources/sidebar.css';

@@ -1,0 +1,361 @@
+.tab {
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: transparent;
+  margin-right: 0px !important;
+}
+
+.tab.active {
+  border-color: var(--colorHighlightBg);
+  border-bottom-color: transparent;
+}
+
+.tab:not(.active) {
+  border-bottom: 1px solid var(--colorHighlightBg);
+}
+.tab:not(.active):hover{
+  background-color: var(--colorHighlightBgAlpha) !important;
+}
+
+.tab .close {
+  display: none !important;
+  background-color: transparent !important;
+  min-width: 17px !important;
+  min-height: 17px !important;
+  width: 17px !important;
+  height: 17px !important;
+  opacity: 1 !important;
+}
+
+.tab:not(.tab-group) {
+  clip-path: polygon(7px 0%, 100% 0, 100% 100%, 0 100%, 0% 7px);
+}
+
+.tab:not(.tab-group).active {
+  background-image: linear-gradient(135deg, var(--colorHighlightBg) 4.5px, transparent 0px);
+}
+
+/* Line fade out - By Tam710562 - Edited by GabeVilela */
+
+.button-toolbar.newtab {
+  position: relative;
+  border-bottom: 1px solid var(--colorHighlightBg);
+  padding-right: 12vmax !important;
+}
+
+.button-toolbar.newtab:before {
+  content: ' ';
+  position: absolute;
+  bottom: -1px;
+  border-bottom: 1px solid var(--colorBg);
+  height: 20%;
+  width: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.toolbar-tabbar:nth-child(2) .button-toolbar.newtab {
+  padding-right: 46vmax !important;
+}
+
+.toolbar-tabbar:nth-child(3) .button-toolbar.newtab {
+  padding-right: 40vmax !important;
+}
+
+.toolbar-tabbar:nth-child(4) .button-toolbar.newtab {
+  padding-right: 30vmax !important;
+}
+
+.toolbar-tabbar:nth-child(5) .button-toolbar.newtab {
+  padding-right: 20vmax !important;
+}
+
+.toolbar-tabbar:nth-child(6) .button-toolbar.newtab {
+  padding-right: 15vmax !important;
+}
+
+.newtab {
+  padding-right: 80px !important;
+}
+
+/* * */
+
+.tab:not(.tab-small) .close {
+  display: inline-block !important;
+}
+
+#browser:not(.alt-tabs) .tab-position .tab:hover.tab-small.active .title, #browser:not(.alt-tabs) .tab-position .tab.force-hover.tab-small.active .title {
+  display: flex !important;
+}
+
+.tab .close svg>path, #vivaldi-tooltip .close path {
+  d: path("M13.374,4.335l-.707-.707L8.508,7.787a.012.012,0,0,1-.016,0L4.333,3.628l-.707.707L7.785,8.494a.012.012,0,0,1,0,.016L3.626,12.669l.707.707L8.492,9.217a.012.012,0,0,1,.016,0l4.159,4.159.707-.707L9.215,8.51a.012.012,0,0,1,0-.016Z");
+}
+
+.close:hover {
+  background-color: var(--colorBgAlphaHeavier) !important;
+}
+.tab.tab-group .close svg {
+  min-width: 14px !important;
+  min-height: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.tabs-top .tab.active:not(.marked):not(.tab-mini):before, .tabs-top .tab.active:not(.marked):not(.tab-mini):after, .tabs-top .tab.active:not(.marked):not(.tab-mini):before {
+  -webkit-mask-image: none;
+  bottom: 0;
+  content: none;
+}
+
+.tab-group .tab-indicator{
+  padding: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  height: 8px !important;
+  border-top: none !important;
+  border-bottom: 1px solid var(--colorHighlightBg);
+}
+
+.tab-group.active .tab-group-indicator {
+  background-color: var(--colorAccentBg) !important;
+}
+
+.tab-group {
+  border-radius: 0px !important;
+}
+
+.tab-group:not(.active) .tab-indicator.active:hover {
+  background-color: var(--colorHighlightBgAlpha) !important;
+}
+
+.tab-group.active .tab-group-indicator{
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: var(--colorHighlightBg);
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.tabs-at-edge .tab-group .tab-indicator{
+  height: 5px !important;
+}
+
+.tab-group .tab-indicator.active {
+  border-bottom: none;
+}
+
+.tab-group .tab-indicator + .tab-indicator{
+  border-left: 1px solid var(--colorHighlightBg) !important;
+}
+
+.tab-group:not(.active) .tab-indicator:first-of-type:not(.active){
+  border-left: 1px solid var(--colorHighlightBg);
+}
+
+.tab-group:not(.active) .tab-indicator:last-of-type:not(.active){
+  border-right: 1px solid var(--colorHighlightBg);
+}
+
+.tab-group .tab-indicator:not(.active):hover {
+  background-color: var(--colorHighlightBgAlpha) !important;
+}
+
+.tab:not(.tab-group) {
+  border-radius: 0px !important;
+  border-top-right-radius: 2px !important;
+}
+
+.tab-group .favicon.jstest-favicon-image img {
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+}
+
+.tab-group .favicon:not(.jstest-favicon-image) {
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+}
+
+.tab-group .favicon.spinner svg {
+  height: 14px !important;
+}
+
+.tab-group .tab-audio .audioicon {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.tab-group .title {
+  margin-top: 3px;
+}
+
+.tab-position .tab .tab-header .button-badge, #panels #switch .button-badge {
+  border: none !important;
+  border-radius: 100px !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 8px !important;
+  min-width: 8px !important;
+  background-color: #0199ff !important;
+  z-index: 1;
+}
+
+.tab-position .tab .tab-header .button-badge {
+  display: none !important;
+}
+
+.tab-position .tab .tab-header .button-badge {
+  margin-left: 2px !important;
+  margin-right: 0px !important;
+  margin-top: 4px !important;
+  margin-bottom: 0px !important;
+}
+
+.tab-position .tab.tab-group .tab-header .button-badge {
+  transform: scale(0.8);
+  margin-top: 6px !important;
+}
+
+#panels #switch .button-badge {
+  margin-left: 0px !important;
+  margin-right: 4px !important;
+  margin-top: 4px !important;
+  margin-bottom: 0px !important;
+}
+
+.tab-position .tab.active .progress-indicator {
+  background-color: var(--colorAccentBg);
+  height: 1px;
+}
+
+.tab-position .tab:not(.active) .progress-indicator {
+  background-color: var(--colorHighlightBgAlpha);
+  height: 2px;
+}
+
+.tab-position .tab:not(.active).tab-group .progress-indicator {
+  height: 4px;
+}
+
+.theme-dark .tab-position .tab.active .tab-header .favicon {
+  filter: none !important;
+}
+
+.theme-dark .tab-position .tab .tab-header .favicon img[srcset^="ht"] {
+  filter: drop-shadow(0px 0px 1px var(--colorAccentBg)) !important;
+}
+
+/* Adds a "zZz" text over hibernated tabs' icon - $discartedTabsIndicator */
+
+#tabs-container .tab.isdiscarded .favicon:before {
+  content: "zZz";
+  font-size: 10px;
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  z-index: 1;
+  background-image: linear-gradient(0deg, hsla(263, 62%, 4%, 0.75), hsla(263, 62%, 4%, 0.75));
+  width: 18px;
+  padding-left: 3px;
+  color: #ffffff;
+}
+
+#tabs-container .tab.tab-group.isdiscarded .favicon:before {
+  font-size: 9px;
+  top: 10px;
+}
+
+#tabs-container .tab.isdiscarded .favicon, #tabs-container .tab.isdiscarded:hover .favicon {
+  filter: none !important
+}
+
+/* * */
+
+.tab-position .tab:not(.active) {
+  color: var(--GXcolorAccentFgFaded) !important;
+  fill: var(--GXcolorAccentFgFaded) !important;
+}
+
+div#tabs-container {
+  background-image: linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
+  margin-left: 40px;
+  padding-left: 0px !important;
+}
+
+.tab-position .tab:not(.active)::before {
+  content: " ";
+  float: right;
+  margin-left: 99.5%;
+  position: fixed;
+  font-size: 14px;
+  margin-top: 8px;
+  width: 1px;
+  height: 13px;
+  background-color: #47454c;
+}
+
+.tab-position .tab:not(.active):hover::before {
+  background-color: transparent;
+}
+
+.tab-position .tab.marked:after {
+  border: none !important;
+  background: var(--colorAccentBgAlpha) !important;
+}
+
+.tab-position .tab:not(.active) .tab-indicator.marked {
+  border: none !important;
+  background: var(--GXcolorAccentFg) !important;
+}
+
+.tab-position .tab.active .tab-indicator.marked {
+  border: none !important;
+  background: var(--colorAccentBg) !important;
+}
+
+#vivaldi-tooltip .active.tooltip-item .thumbnail-caption {
+  background-color: var(--GXcolorAccent);
+  color: #ffffff !important;
+}
+
+#vivaldi-tooltip .tab-solo .active.tooltip-item {
+  background-color: var(--GXcolorAccent);
+}
+
+#vivaldi-tooltip .tooltip-item .thumbnail-caption {
+  background-color: var(--colorBg);
+  color: var(--GXcolorAccentFgFaded) !important;
+}
+
+#vivaldi-tooltip .tooltip-item:hover .thumbnail-caption {
+  background-color: var(--GXcolorAccent);
+  color: #ffffff !important;
+}
+
+.active.tooltip-item.active {
+  border-bottom: 1px solid var(--colorAccentBg);
+}
+
+#vivaldi-tooltip .tooltip .tab-group .tooltip-item.active .thumbnail-text {
+  font-weight: 400 !important;
+}
+
+#vivaldi-tooltip .tooltip-item .thumbnail-image {
+  border-radius: 0px !important;
+  border-bottom: none !important;
+}
+
+#vivaldi-tooltip .tooltip-item:not(:last-of-type) {
+  border-right: 1px solid #47454c !important;
+}
+
+#vivaldi-tooltip .tooltip-item .tooltip-audio-button {
+  background-color: transparent !important;
+}
+
+.tab.tab-group:not(.active) .tab-indicator:not(.active), .tab.tab-group:not(.active) .tab-indicator:not(.active):hover {
+  transition: 0.1s ease;
+}
