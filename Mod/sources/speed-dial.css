@@ -1,0 +1,26 @@
+.dials.speeddial .thumbnail-image {
+    box-shadow: none !important;
+}
+
+.thumbnail-image svg .folder-tab-color {
+    fill: transparent !important;
+}
+
+.dials.speeddial .thumbnail-image.dial-folder-icon {
+    clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+}
+
+.dials.speeddial .dial.folder .thumbnail-image {
+    border-bottom-left-radius: 4px !important;
+    border-top-right-radius  : 4px !important;
+}
+
+.thumbnail-image {
+    background-color: var(--colorBgAlphaHeavy);
+}
+
+.dials .dial .button-title {
+    background-color: transparent !important;
+    color           : var(--colorFgIntense);
+    box-shadow      : none !important;
+}

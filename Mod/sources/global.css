@@ -1,0 +1,24 @@
+.vivaldi svg>path:nth-child(1) {
+    fill: var(--colorHighlightBg) !important;
+}
+
+.vivaldi svg>path:nth-child(2) {
+    fill: var(--colorBg) !important;
+}
+
+#titlebar button.vivaldi {
+    margin-left: 3px;
+    margin-top : 3px;
+}
+
+.vivaldi span.burger-icon {
+    opacity: 1 !important;
+}
+
+.vivaldi:hover {
+    background-color: var(--WButtonHoverBg) !important;
+}
+
+.button-popup {
+    background-color: var(--colorAccentBgDark);
+}

@@ -3,6 +3,13 @@ A custom UI mod for Vivaldi Browser, based on Opera GX
 <hr>
 <h2>Changelog</h2>
 <ul>
+  <li>V1.5 - Changes to match with the design updates made by Opera and Vivaldi
+    <ul>
+      <li>Due to Vivaldi no longer marking private windows with the "private" class, and Opera adding support for more color customization, the "Color from the active page" will change the color of the frame, not the line</li>
+      <li>Some fixes on the address bar</li>
+      <li>Removed part of the stylezation in favor of easier maintance</li>
+    </ul>
+  </li>
   <li>V1.4 - The last update of the decade
     <ul>
       <li>Redesign of the sidebar. Now, it is scrollable</li>

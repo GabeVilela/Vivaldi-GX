@@ -1,0 +1,13 @@
+:root {
+  --WButtonHoverBg   : #38444f;
+  --spnr1            : #949499;
+  --spnr2            : #838489;
+  --spnr3            : #807f85;
+  --spnr4            : #67666c;
+  --spnr5            : #54535a;
+  --spnr6            : #3d3a43;
+  --spnr7            : #2d2b33;
+  --spnr8            : #221f28;
+  --checkboxAnimation: 0.18s cubic-bezier(0.26, -0.21, 0.79, 1.22);
+  --verticalEllipsis : '⋮';
+}

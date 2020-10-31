@@ -1,190 +1,201 @@
-#panels-container.left #switch, #switch>button:focus:not(active) {
-    background-color: var(--colorBg) !important;
-    box-shadow: none !important;
-    border-right: none !important;
-  }
-  
-  #panels #switch {
-    margin-left: 3px !important;
-    overflow-y: auto;
-    max-width: 100%;
-    overflow-x: hidden;
-    margin-bottom: 40px !important;
-  }
-  
-  #panels #switch::-webkit-scrollbar {
-    width: 0px;
-  }
-  
-  #panels {
-    background-color: var(--colorBg) !important;
-  }
-  
-  #panels #switch>button:not(:last-of-type), #panels #switch>div {
-    margin-bottom: 12px;
-  }
-  
-  #browser:not(.fullscreen) 
-  #panels-container:not(.overlay) {
-    min-width: 40px !important;
-    border-right: none !important;
-  }
-  
-  #panels-container:not(.overlay) .panel-group {
-    margin-left: 3px !important;
-    border-top: 1px solid var(--colorHighlightBg) !important;
-    border-bottom: none !important;
-  }
-  
-  #panels-container.overlay .panel-group {
-    left: 40px !important;
-  }
-  
-  #panels #switch>button:nth-child(2)::before, #panels #switch button:nth-child(6)::before, #panels #switch .addwebpanel-wrapper::before, #panels #switch>button:last-of-type::before {
-    content: " ";
-    width: 12px;
-    margin-top: -16px;
-    height: 1px;
-    background-color: var(--colorHighlightBg);
-    float: left;
-    margin-left: 11px;
-  }
-  
-  #panels #switch>button:nth-child(2), #panels #switch button:nth-child(6), #panels #switch .addwebpanel-wrapper, #panels #switch>button:last-of-type {
-    margin-top: 16px;
-  }
-  
-  .addwebpanelcallout header {
-    display: none;
-  }
-  
-  .addwebpanelcallout .webpanel-suggestions {
-    display: none;
-  }
-  
-  #panels .addwebpanelcallout {
-    background-color: transparent;
-    margin-left: -201px;
-    animation: none !important;
-  }
-  
-  .addwebpanelcallout input.address {
-    width: 300px !important;
-  }
-  
-  .addwebpanelcallout .webpanel-input {
-    transform: rotate(-90deg);
-  }
-  
-  .addwebpanelcallout input.address {
-    letter-spacing: 2px;
-    font-weight: 500;
-  }
-  
-  #panels-container:not(.overlay) .panel-collapse-guard {
-    min-width: 150px !important;
-  }
-  
-  #panels-container.overlay {
-    border-right: none !important;
-    width: 40px !important;
-  }
-  
-  #panels-container:after {
-    background-color: transparent;
-  }
-  
-  div#webview-container {
-    border-left: 1px solid var(--colorHighlightBg) !important;
-  }
-  
-  #webview-container:before {
-    content: ' ';
-    position: absolute;
-    left: -1px;
-    border-left: 1px solid #131017;
-    height: 100%;
-    width: 0.5%;
-    border-top-left-radius: 100%;
-  }
-  
-  #browser.fullscreen div#webview-container {
-    border-left: none !important;
-  }
-  
-  #browser.fullscreen div#webview-container::before {
-    content: none !important;
-  }
-  
-  #switch button {
-    border: none !important;
-    border-radius: 0px !important;
-  }
-  
-  #switch button:hover, #switch button.addwebpanel-wrapper:hover {
-    background-color: transparent !important;
-  }
-  
-  #switch button img {
-    width: 16px !important;
-    height: 16px !important;
-  }
-  
-  #switch>button:hover svg, #switch>button img:hover, .addwebpanel-wrapper .addwebpanel:hover svg, #switch>button.downloads.in-progress:hover div.progress {
-    transform: scale(1.18);
-    transition: 0.15s ease-out !important;
-  }
-  
-  #switch>button svg, #switch>button img, .addwebpanel-wrapper .addwebpanel svg {
-    transition: 0.15s ease-in !important;
-  }
-  
-  #switch>button.active {
-    background-color: transparent !important;
-    border: none !important;
-  }
-  
-  #switch .addwebpanel-wrapper>button, #switch>button {
-    fill: var(--colorHighlightBg) !important;
-  }
-  
-  .theme-dark #switch button.webviewbtn img {
-    background-color: transparent !important;
-    filter: drop-shadow(0px 0px 1px var(--colorHighlightBg));
-    border-radius: 0px !important;
-  }
-  
-  #switch>button:hover:not(.active), .left #switch .addwebpanel-wrapper>button:hover:not(.active) {
-    box-shadow: none !important;
-  }
-  
-  #switch .addwebpanel-wrapper>button svg, #switch>button svg {
-    padding-top: 0px !important;
-  }
-  
-  #switch button.webviewbtn img {
-    padding: 0px !important;
-  }
-  
-  #switch>button.downloads.in-progress div.progress div.loaded {
-    background-color: var(--colorHighlightBg) !important;
-    height: 2px;
-    max-width: 16px;
-    position: absolute;
-    top: 2px;
-    border-radius: 0px !important;
-  }
-  
-  #switch>button.downloads.in-progress div.progress {
-    background-color: var(--colorBg) !important;
-    width: 18px !important;
-    top: 22px !important;
-    left: 9px !important;
-    height: 6px;
-    border-left: 1px solid var(--colorHighlightBg) !important;
-    border-right: 1px solid var(--colorHighlightBg) !important;
-    border-top: none !important;
-    border-bottom: none !important;
-    border-radius: 0px !important;
-  }
-  
+#panels-container.left #switch,
+#switch>button:focus:not(active) {
+  background-color: var(--colorBg) !important;
+  box-shadow      : none !important;
+  border-right    : none !important;
+}
+
+#panels #switch {
+  margin-left  : 3px !important;
+  overflow-y   : auto;
+  max-width    : 100%;
+  overflow-x   : hidden;
+  margin-bottom: 40px !important;
+}
+
+#panels #switch::-webkit-scrollbar {
+  width: 0px;
+}
+
+#panels {
+  background-color: var(--colorBg) !important;
+}
+
+#panels #switch>button:not(:last-of-type),
+#panels #switch>div {
+  margin-bottom: 12px;
+}
+
+#panels-container:not(.overlay):not([style*="width: 0px;"]) {
+  min-width   : 40px !important;
+  border-right: none !important;
+}
+
+#browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
+  min-width: 0px !important;
+}
+
+#panels-container:not(.overlay) .panel-group {
+  margin-left  : 3px !important;
+  border-top   : 1px solid var(--colorHighlightBg) !important;
+  border-bottom: none !important;
+}
+
+#panels-container.overlay .panel-group {
+  left: 40px !important;
+}
+
+#panels #switch>button:nth-child(4)::before,
+#panels #switch button:nth-child(6)::before,
+#panels #switch .addwebpanel-wrapper::before,
+#panels #switch>button:last-of-type::before {
+  content         : " ";
+  width           : 12px;
+  margin-top      : -16px;
+  height          : 1px;
+  background-color: var(--colorHighlightBg);
+  float           : left;
+  margin-left     : 11px;
+}
+
+#panels #switch>button:nth-child(4),
+#panels #switch button:nth-child(6),
+#panels #switch .addwebpanel-wrapper,
+#panels #switch>button:last-of-type {
+  margin-top: 16px;
+}
+
+.addwebpanelcallout header {
+  display: none;
+}
+
+.addwebpanelcallout .webpanel-suggestions {
+  display: none;
+}
+
+#panels .addwebpanelcallout {
+  background-color: transparent;
+  margin-left     : -201px;
+  animation       : none !important;
+}
+
+.addwebpanelcallout input.address {
+  width: 300px !important;
+}
+
+.addwebpanelcallout .webpanel-input {
+  transform: rotate(-90deg);
+}
+
+.addwebpanelcallout input.address {
+  letter-spacing: 2px;
+  font-weight   : 500;
+}
+
+#panels-container:not(.overlay) .panel-collapse-guard {
+  min-width: 150px !important;
+}
+
+#panels-container.overlay {
+  border-right: none !important;
+  width       : 40px !important;
+}
+
+#panels-container:after {
+  background-color: transparent;
+}
+
+#panels-container:not([style*="width: 0px;"])+#webview-container {
+  border-left: 1px solid var(--colorBg) !important;
+}
+
+#panels-container:not([style*="width: 0px;"])+#webview-container:before {
+  content         : ' ';
+  position        : absolute;
+  height          : 100%;
+  width           : 1px;
+  left            : -1px;
+  top             : 0;
+  background-image: linear-gradient(to bottom, var(--colorHighlightBg), transparent 75vh);
+  z-index         : 1;
+}
+
+#switch button {
+  border       : none !important;
+  border-radius: 0px !important;
+}
+
+#switch button:hover,
+#switch button.addwebpanel-wrapper:hover {
+  background-color: transparent !important;
+}
+
+#switch button img {
+  width : 16px !important;
+  height: 16px !important;
+}
+
+#switch>button:hover svg,
+#switch>button img:hover,
+.addwebpanel-wrapper .addwebpanel:hover svg,
+#switch>button.downloads.in-progress:hover div.progress {
+  transform : scale(1.18);
+  transition: 0.15s ease-out !important;
+}
+
+#switch>button svg,
+#switch>button img,
+.addwebpanel-wrapper .addwebpanel svg {
+  transition: 0.15s ease-in !important;
+}
+
+#switch>button.active {
+  background-color: transparent !important;
+  border          : none !important;
+}
+
+#switch .addwebpanel-wrapper>button,
+#switch>button {
+  fill: var(--colorHighlightBg) !important;
+}
+
+.theme-dark #switch button.webviewbtn img {
+  background-color: transparent !important;
+  border-radius   : 0px !important;
+}
+
+#switch>button:hover:not(.active),
+.left #switch .addwebpanel-wrapper>button:hover:not(.active) {
+  box-shadow: none !important;
+}
+
+#switch .addwebpanel-wrapper>button svg,
+#switch>button svg {
+  padding-top: 0px !important;
+}
+
+#switch button.webviewbtn img {
+  padding: 0px !important;
+}
+
+#switch>button.downloads.in-progress div.progress div.loaded {
+  background-color: var(--colorHighlightBg) !important;
+  height          : 2px;
+  max-width       : 16px;
+  position        : absolute;
+  top             : 2px;
+  border-radius   : 0px !important;
+}
+
+#switch>button.downloads.in-progress div.progress {
+  background-color: var(--colorBg) !important;
+  width           : 18px !important;
+  top             : 22px !important;
+  left            : 9px !important;
+  height          : 6px;
+  border-left     : 1px solid var(--colorHighlightBg) !important;
+  border-right    : 1px solid var(--colorHighlightBg) !important;
+  border-top      : none !important;
+  border-bottom   : none !important;
+  border-radius   : 0px !important;
+}

@@ -4,8 +4,13 @@
 */
 
 /* This one is essential, don't remove it */
+
 @import 'sources/vars.css';
+@import 'sources/global.css';
 /* --- */
+
 @import 'sources/address-bar.css';
 @import 'sources/tab-bar.css';
+@import 'sources/status-bar.css';
 @import 'sources/sidebar.css';
+@import 'sources/speed-dial.css';
