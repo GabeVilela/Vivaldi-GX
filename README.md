@@ -1,5 +1,5 @@
 # Vivaldi-GX
-A custom UI mod for Vivaldi Browser, based on Opera GX
+A custom UI mod for Vivaldi Browser, based on Opera GX<br>
 <b><i>DISCLAIMER: This mod wasn't developed and/or approved by either Opera Norway AS, or Vivaldi Technologies<i><b>
 <hr>
 <h2>Changelog</h2>
