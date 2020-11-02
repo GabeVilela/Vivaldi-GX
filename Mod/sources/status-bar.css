@@ -11,7 +11,7 @@
   left            : 0;
   width           : 100%;
   height          : 1px;
-  background-image: linear-gradient(to right, var(--colorHighlightBgAlpha) 0%, var(--colorHighlightBg) 10vw, transparent 83vw);
+  background-image: linear-gradient(to right, transparent 40px, var(--colorHighlightBg) 50vw, transparent 100vw);
 }
 
 .toolbar-statusbar>div>button,

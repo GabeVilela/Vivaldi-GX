@@ -1,5 +1,6 @@
 # Vivaldi-GX
 A custom UI mod for Vivaldi Browser, based on Opera GX
+<b><i>DISCLAIMER: This mod wasn't developed and/or approved by either Opera Norway AS, or Vivaldi Technologies<i><b>
 <hr>
 <h2>Changelog</h2>
 <ul>
@@ -64,6 +65,3 @@ A custom UI mod for Vivaldi Browser, based on Opera GX
 </ol>
 The location of the file "style.css" MUST be in the same folder as you choosed in step 1.
 <br>PRO Tip: Read the text files inside the folders, they contain some important information about each mod version.
-<hr>
-<h2>Who is the creator of this?</h2>
-Me, Gabriel Vilela. A braziliam TI student, at the moment, doing graduation in "Information Systems".

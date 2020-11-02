@@ -1,0 +1,9 @@
+Disclaimer: There may be some browser settings that do not work well with this modification, such as:
+- Show Window Background Image
+So I recommend that you disable these settings, and use the browser with the most "default" layout possible.
+
+Theme settings:
+> Accent color from active page: be aware that some websites may have a dark accent color
+> Apply accent color to window: unchecked
+> Transparent Tabs: checked
+> Corner rounding: 5px

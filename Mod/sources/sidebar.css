@@ -116,7 +116,7 @@
   width           : 1px;
   left            : -1px;
   top             : 0;
-  background-image: linear-gradient(to bottom, var(--colorHighlightBg), transparent 75vh);
+  background-image: linear-gradient(to bottom, var(--colorHighlightBg), transparent 100%);
   z-index         : 1;
 }
 

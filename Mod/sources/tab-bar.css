@@ -1,5 +1,5 @@
 .tab {
-  border-width       : 1px 0px;
+  border-width       : 1px 0px 0px 0px;
   border-style       : solid;
   border-top-color   : transparent;
   border-bottom-color: var(--colorHighlightBg);
@@ -38,13 +38,75 @@
   background-image: linear-gradient(135deg, var(--colorHighlightBg) 4.5px, transparent 0px);
 }
 
-.button-toolbar.newtab:before {
-  content         : ' ';
-  position        : absolute;
-  bottom          : 0px;
+.tab-position[style*="z-index: 2;"]:after,
+.tab-position[style*="z-index: 3;"]:after {
+  --modLineWidth  : 25vw;
+  content         : " ";
+  background-image: linear-gradient(to right, var(--colorHighlightBg), transparent);
+  width           : var(--modLineWidth);
   height          : 1px;
-  width           : 25vw;
-  background-image: linear-gradient(to right, var(--colorHighlightBg), transparent)
+  position        : absolute;
+  right           : calc(calc(var(--modLineWidth) - 1px) * -1);
+  bottom          : 0px;
+}
+
+.tab-strip>span:nth-child(1)>.tab-position[style*="z-index: 2;"]:after,
+.tab-strip>span:nth-child(1)>.tab-position[style*="z-index: 3;"]:after,
+.tab-strip>span:nth-child(2)>.tab-position[style*="z-index: 2;"]:after,
+.tab-strip>span:nth-child(2)>.tab-position[style*="z-index: 3;"]:after {
+  --modLineWidth: 50vw !important;
+}
+
+.tab-strip>span:nth-child(3)>.tab-position[style*="z-index: 2;"]:after,
+.tab-strip>span:nth-child(3)>.tab-position[style*="z-index: 3;"]:after {
+  --modLineWidth: 40vw !important;
+}
+
+.tab-strip>span:nth-child(4)>.tab-position[style*="z-index: 2;"]:after,
+.tab-strip>span:nth-child(4)>.tab-position[style*="z-index: 3;"]:after {
+  --modLineWidth: 35vw !important;
+}
+
+.tab-strip>span:nth-child(5)>.tab-position[style*="z-index: 2;"]:after,
+.tab-strip>span:nth-child(5)>.tab-position[style*="z-index: 3;"]:after {
+  --modLineWidth: 30vw !important;
+}
+
+.tab-position[style*="z-index: 2;"]:before,
+.tab-position[style*="z-index: 3;"]:before {
+  content         : " ";
+  background-color: var(--colorHighlightBg);
+  width           : 100vw;
+  height          : 1px;
+  position        : absolute;
+  left            : -100vw;
+  bottom          : 0px;
+}
+
+.tab-position[style*="z-index: 3;"] {
+  filter: brightness(1) contrast(1) opacity(1) !important;
+}
+
+.tab-strip {
+  --modMaskT: -100%;
+  --modMaskB: 100%;
+  --modMaskL: 0%;
+  --modMaskR: 100%;
+  clip-path : polygon(var(--modMaskL) var(--modMaskT),
+      var(--modMaskR) var(--modMaskT),
+      var(--modMaskR) var(--modMaskB),
+      var(--modMaskL) var(--modMaskB));
+}
+
+.tab-strip:after {
+  content         : " ";
+  position        : absolute;
+  width           : 70px;
+  height          : 1px;
+  background-image: linear-gradient(to right, transparent, var(--colorBgDark));
+  z-index         : 3;
+  right           : 0px;
+  bottom          : 0px;
 }
 
 .tab:not(.tab-small) .close {
@@ -102,6 +164,26 @@
   content           : none;
 }
 
+.tab.marked .tab-selection>.outer {
+  stroke: transparent !important;
+}
+
+.tab.marked .tab-selection>.inner {
+  stroke: transparent !important;
+  fill  : var(--colorHighlightBgAlpha) !important;
+}
+
+.tab.marked:not(.active) .tab-indicator.marked.active.tab-indicator.marked:after {
+  content: none !important;
+}
+
+.tab-group-indicator .tab-indicator.marked .tab-selection>.outer,
+.tab-group-indicator .tab-indicator.marked .tab-selection>.inner {
+  stroke: none !important;
+  fill  : none !important;
+}
+
+
 .tab-group .tab-indicator {
   padding         : 0 !important;
   border-radius   : 0 !important;
@@ -109,20 +191,44 @@
   background-color: transparent !important;
   height          : 8px !important;
   border-top      : none !important;
-  border-bottom   : 1px solid var(--colorHighlightBg);
+  border-bottom   : 1px solid var(--colorHighlightBg) !important;
 }
 
 .tab-group.active .tab-group-indicator {
   background-color: var(--colorAccentBg) !important;
 }
 
+.tab-group .tab-indicator+.tab-indicator {
+  border-left: 1px solid var(--colorHighlightBg) !important;
+}
+
+.tab-group:not(.active) .tab-indicator:first-of-type {
+  border-left: 1px solid var(--colorHighlightBg);
+}
+
+.tab-group:not(.active) .tab-indicator:last-of-type {
+  border-right: 1px solid var(--colorHighlightBg);
+}
+
+.tab-group:not(.active) .tab-indicator.active:not(.marked):hover {
+  background-color: var(--colorHighlightBgAlpha) !important;
+}
+
+.tab-group .tab-indicator:not(.active):not(.marked):hover {
+  background-color: var(--colorHighlightBgAlpha) !important;
+}
+
+.tab-group-indicator .tab-indicator.marked {
+  background-color  : var(--colorHighlightBg) !important;
+  border-left-color : transparent !important;
+  border-right-color: transparent !important;
+}
+
+
 .tab-group {
   border-radius: 0px !important;
 }
 
-.tab-group:not(.active) .tab-indicator.active:hover {
-  background-color: var(--colorHighlightBgAlpha) !important;
-}
 
 .tab-group.active .tab-group-indicator {
   border-width : 1px 1px 0 1px;
@@ -137,24 +243,10 @@
 }
 
 .tab-group .tab-indicator.active {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
-.tab-group .tab-indicator+.tab-indicator {
-  border-left: 1px solid var(--colorHighlightBg) !important;
-}
 
-.tab-group:not(.active) .tab-indicator:first-of-type:not(.active) {
-  border-left: 1px solid var(--colorHighlightBg);
-}
-
-.tab-group:not(.active) .tab-indicator:last-of-type:not(.active) {
-  border-right: 1px solid var(--colorHighlightBg);
-}
-
-.tab-group .tab-indicator:not(.active):hover {
-  background-color: var(--colorHighlightBgAlpha) !important;
-}
 
 .tab:not(.tab-group) {
   border-radius          : 0px !important;
@@ -286,20 +378,6 @@ div#tabs-container {
   background-color: transparent;
 }
 
-.tab-position .tab.marked:after {
-  border    : none !important;
-  background: var(--colorAccentBgAlpha) !important;
-}
-
-.tab-position .tab:not(.active) .tab-indicator.marked {
-  border    : none !important;
-  background: var(--GXcolorAccentFg) !important;
-}
-
-.tab-position .tab.active .tab-indicator.marked {
-  border    : none !important;
-  background: var(--colorAccentBg) !important;
-}
 
 #vivaldi-tooltip .active.tooltip-item .thumbnail-caption {
   background-color: var(--GXcolorAccent);

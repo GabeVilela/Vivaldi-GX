@@ -10,7 +10,9 @@
 /* --- */
 
 @import 'sources/address-bar.css';
+@import 'sources/bookmarks-bar.css';
 @import 'sources/tab-bar.css';
 @import 'sources/status-bar.css';
 @import 'sources/sidebar.css';
 @import 'sources/speed-dial.css';
+@import 'sources/modals.css';
