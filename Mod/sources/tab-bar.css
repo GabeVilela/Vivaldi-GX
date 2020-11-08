@@ -3,7 +3,6 @@
   border-style       : solid;
   border-top-color   : transparent;
   border-bottom-color: var(--colorHighlightBg);
-  margin-right       : 0px !important;
 }
 
 .tab.active {
@@ -149,12 +148,6 @@
   transform: scale(0);
 }
 
-.tab.tab-group .close svg {
-  min-width : 14px !important;
-  min-height: 14px !important;
-  width     : 14px !important;
-  height    : 14px !important;
-}
 
 .tabs-top .tab.active:not(.marked):not(.tab-mini):before,
 .tabs-top .tab.active:not(.marked):not(.tab-mini):after,
@@ -229,6 +222,10 @@
   border-radius: 0px !important;
 }
 
+.tab-group:not(.active) .tab-group-indicator {
+  padding-left : 5px;
+  padding-right: 5px;
+}
 
 .tab-group.active .tab-group-indicator {
   border-width : 1px 1px 0 1px;
@@ -236,10 +233,11 @@
   border-color : var(--colorHighlightBg);
   padding-left : 0px !important;
   padding-right: 0px !important;
+  margin-right : 1px;
 }
 
 .tabs-at-edge .tab-group .tab-indicator {
-  height: 5px !important;
+  height: 8px !important;
 }
 
 .tab-group .tab-indicator.active {
@@ -253,65 +251,29 @@
   border-top-right-radius: 2px !important;
 }
 
-.tab-group .favicon.jstest-favicon-image img {
-  width     : 14px;
-  height    : 14px;
+
+.tab-group .tab-header>span.favicon {
+  transform : scale(0.7) !important;
   margin-top: 3px;
 }
 
-.tab-group .favicon:not(.jstest-favicon-image) {
-  width     : 14px;
-  height    : 14px;
-  margin-top: 4px;
+.tab-group .tab-header>span.tab-audio {
+  margin-top: 3px !important;
 }
 
-.tab-group .favicon.spinner svg {
-  height: 14px !important;
+.tab-group .tab-header>.title {
+  transform  : scale(0.9) !important;
+  margin-left: -10px;
+  margin-top : 5px;
 }
 
-.tab-group .tab-audio .audioicon {
-  width     : 24px;
-  height    : 24px;
-  margin-top: 4px;
-}
-
-.tab-group .title {
-  margin-top: 3px;
-}
-
-.tab-position .tab .tab-header .button-badge,
-#panels #switch .button-badge {
-  border          : none !important;
-  border-radius   : 100px !important;
-  font-size       : 0px !important;
-  padding         : 0px !important;
-  height          : 8px !important;
-  min-width       : 8px !important;
-  background-color: #0199ff !important;
-  z-index         : 1;
+.tab-group .tab-header>.close {
+  transform : scale(0.78) !important;
+  margin-top: 2px;
 }
 
 .tab-position .tab .tab-header .button-badge {
   display: none !important;
-}
-
-.tab-position .tab .tab-header .button-badge {
-  margin-left  : 2px !important;
-  margin-right : 0px !important;
-  margin-top   : 4px !important;
-  margin-bottom: 0px !important;
-}
-
-.tab-position .tab.tab-group .tab-header .button-badge {
-  transform : scale(0.8);
-  margin-top: 6px !important;
-}
-
-#panels #switch .button-badge {
-  margin-left  : 0px !important;
-  margin-right : 4px !important;
-  margin-top   : 4px !important;
-  margin-bottom: 0px !important;
 }
 
 .tab-position .tab.active .progress-indicator {
@@ -447,4 +409,71 @@ div#tabs-container {
 .newtab>button:hover {
   background-color: var(--colorHighlightBgAlpha) !important;
   border          : none !important;
+}
+
+.toolbar-tabbar.sync-and-trash-container button svg {
+  fill: var(--colorHighlightBg);
+}
+
+.toolbar-tabbar.sync-and-trash-container button {
+  border-radius: 0px !important;
+}
+
+.toolbar-tabbar.sync-and-trash-container button:hover {
+  background-color: var(--WButtonHoverBg) !important;
+}
+
+.newtab>button {
+  height       : 22px !important;
+  width        : 23px !important;
+  flex         : 0 0 23px;
+  min-width    : 23px !important;
+  min-height   : 22px !important;
+  border-radius: 2px !important;
+  margin-left  : 3px;
+  margin-bottom: 3px;
+}
+
+.tab:not(.tab-group) .tab-audio {
+  transform       : scale(0.8) !important;
+  left            : 13px;
+  bottom          : -2px;
+  border-radius   : 100%;
+  background-color: var(--colorAccentBg) !important;
+}
+
+.tab:not(.tab-group).active .tab-audio {
+  left: 12px;
+}
+
+.tab:not(.tab-group).audio-on .favicon,
+.tab:not(.tab-group).audio-muted .favicon {
+  transform: scale(1) !important;
+}
+
+.tab.pinned .tab-audio {
+  left   : 13px !important;
+  padding: 0px !important;
+  height : 19px !important;
+  width  : 19px !important;
+  bottom : -5px;
+}
+
+.tab.pinned.active .tab-audio {
+  left: 12px !important;
+}
+
+.tab.pinned .audioicon {
+  filter: invert(1);
+}
+
+.tab.tab-group .tab-audio {
+  transform: scale(0.8) !important;
+  left     : 20px;
+  top      : 7px !important;
+}
+
+.tab-group.audio-on .title,
+.tab-group.audio-muted .title {
+  margin-left: 3px;
 }

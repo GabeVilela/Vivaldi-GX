@@ -22,3 +22,23 @@
 .button-popup {
     background-color: var(--colorAccentBgDark);
 }
+
+.tab-position .tab .tab-header .button-badge,
+#panels #switch .button-badge {
+    border          : none !important;
+    border-radius   : 100px !important;
+    font-size       : 0px !important;
+    padding         : 0px !important;
+    height          : 8px !important;
+    min-width       : 8px !important;
+    background-color: var(--colorHighlightBg) !important;
+    z-index         : 1;
+}
+
+#browser.win .window-buttongroup {
+    fill: var(--colorHighlightBg);
+}
+
+#browser.win .window-buttongroup button:hover:not(.window-close) {
+    background-color: var(--WButtonHoverBg) !important;
+}

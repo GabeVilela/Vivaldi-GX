@@ -1,0 +1,6 @@
+/* Rounder corners in Favicons on Omnibox */
+/* DELETE THIS LINE 1/2
+.OmniLinkItem-Favicon > *{
+  border-radius   : 100%;
+}
+DELETE THIS LINE 2/2 */

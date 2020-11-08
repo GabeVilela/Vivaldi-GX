@@ -2,6 +2,7 @@
   background-color: var(--colorBg) !important;
   box-shadow      : none !important;
   border-bottom   : none !important;
+  padding: 0px 2px !important;
 }
 
 .toolbar-statusbar:before {
@@ -16,11 +17,34 @@
 
 .toolbar-statusbar>div>button,
 .toolbar-statusbar .page-zoom-controls .button-toolbar svg {
-  fill: var(--colorFg);
+  fill : var(--colorHighlightBg);
+  color: var(--colorHighlightBg);
+}
+
+.toolbar-statusbar input[type="range"] {
+  background-color: var(--colorHighlightBgDark) !important;
+  height          : 2px;
+  box-shadow      : none !important;
+}
+
+.toolbar-statusbar input[type="range"]::-webkit-slider-thumb {
+  background   : var(--colorBg) !important;
+  border-color : var(--colorHighlightBg);
+  width        : 10px;
+  height       : 10px;
+  transform    : rotateZ(45deg);
+  border-radius: 0px !important;
+  box-shadow   : none !important;
 }
 
 .toolbar-statusbar .button-toolbar>button.button-pressed {
   background-color: transparent;
+}
+
+.toolbar>.button-toolbar>.button-on.button-on,
+.toolbar>.toolbar-group .button-toolbar>.button-on.button-on {
+  fill : var(--colorFg) !important;
+  color: var(--colorFg) !important;
 }
 
 .toolbar-statusbar .button-toolbar button:hover,
@@ -30,7 +54,7 @@ button.ClockPopup-Preset:hover+button.ClockPopup-Preset-Clear {
 
 .toolbar-statusbar .page-zoom-controls,
 .toolbar-statusbar .page-zoom-controls .zoom-percent {
-  color: var(--colorFg) !important;
+  color: var(--colorHighlightBg) !important;
 }
 
 .toolbar-statusbar .page-zoom-controls .button-title {
@@ -41,56 +65,4 @@ button.ClockPopup-Preset:hover+button.ClockPopup-Preset-Clear {
 .toolbar-statusbar .page-zoom-controls button:disabled>.button-title {
   color  : var(--colorFg) !important;
   opacity: 0.3;
-}
-
-/* Changing screenshot icon's camera - $statusbarNewCameraIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M6 2C4.89543 2 4 2.89543 4 4H3C1.34315 4 0 5.34315 0 7V11C0 12.6569 1.34315 14 3 14H13C14.6569 14 16 12.6569 16 11V7C16 5.34315 14.6569 4 13 4H12C12 2.89543 11.1046 2 10 2H6ZM6 4H10C10 5.10457 10.8954 6 12 6H13C13.5523 6 14 6.44772 14 7V11C14 11.5523 13.5523 12 13 12H3C2.44772 12 2 11.5523 2 11V7C2 6.44772 2.44772 6 3 6H4C5.10457 6 6 5.10457 6 4Z"] {
-  d: path("M13.925,3.51H12.106a.877.877,0,0,1-.617-.254L9.725,1.51H6.285L4.521,3.256A.877.877,0,0,1,3.9,3.51H2.085a1.069,1.069,0,0,0-1.07,1.06v8.86a1.06,1.06,0,0,0,1.06,1.06h11.85a1.061,1.061,0,0,0,1.06-1.06V4.57A1.063,1.063,0,0,0,13.925,3.51Zm.06,9.92-.06.06-11.91-.06.06-7.28V5.68l.01-1.17,1.17.01H4.3a.877.877,0,0,0,.614-.251l.774-.759,1.02-1H9.3l1.02,1,.814.8a.877.877,0,0,0,.615.251h1.061l1.17.01Z");
-}
-
-.toolbar-statusbar path[d="M8 11C9.10457 11 10 10.1046 10 9C10 7.89543 9.10457 7 8 7C6.89543 7 6 7.89543 6 9C6 10.1046 6.89543 11 8 11Z"] {
-  d: path("M7.991,6.525A2.019,2.019,0,1,1,5.972,8.544,2.021,2.021,0,0,1,7.991,6.525m0-1A3.019,3.019,0,1,0,11.01,8.544,3.019,3.019,0,0,0,7.991,5.525Z");
-}
-
-/* Changing back page icon on status bar - $statusbarNewBackPageIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M10.2071 4.20711C10.5977 3.81658 10.5977 3.18342 10.2071 2.79289C9.81661 2.40237 9.18345 2.40237 8.79292 2.79289L3.58582 8L8.79292 13.2071C9.18345 13.5976 9.81661 13.5976 10.2071 13.2071C10.5977 12.8166 10.5977 12.1834 10.2071 11.7929L6.41424 8L10.2071 4.20711Z"] {
-  d: path("M4,8,11.2.8l.7.7L5.6,7.9a.1.1,0,0,0,0,.1L12,14.5l-.7.7L4,8H4Z");
-}
-
-/* Changing next page icon on status bar - $statusbarNewNextPageIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M5.79286 11.7929C5.40234 12.1834 5.40234 12.8166 5.79286 13.2071C6.18339 13.5976 6.81655 13.5976 7.20708 13.2071L12.4142 8L7.20708 2.79289C6.81655 2.40237 6.18339 2.40237 5.79287 2.79289C5.40234 3.18342 5.40234 3.81658 5.79287 4.20711L9.58576 8L5.79286 11.7929Z"] {
-  d: path("M12,8,4.8.8,4,1.5l6.4,6.4a.1.1,0,0,1,0,.1L4,14.5l.7.7L12,8h0Z");
-}
-
-/* Changing back domain icon on status bar - $statusbarNewBackDomainIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M6 3C6.55228 3 7 3.44772 7 4V7L10.2929 3.70711C10.9229 3.07714 12 3.52331 12 4.41421V11.5858C12 12.4767 10.9229 12.9229 10.2929 12.2929L7 9V12C7 12.5523 6.55228 13 6 13C5.44772 13 5 12.5523 5 12V4C5 3.44772 5.44772 3 6 3Z"] {
-  d: path("M11.1.8h0L3.9,8h0l7.2,7.2h1V.8ZM5.4,8.1a.1.1,0,0,1,0-.1l5.7-5.7V13.7Z");
-}
-
-/* Changing next domain icon on status bar - $statusbarNewNextDomainIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M10 13C9.44772 13 9 12.5523 9 12L9 9L5.70711 12.2929C5.07714 12.9229 4 12.4767 4 11.5858L4 4.41421C4 3.52331 5.07714 3.07714 5.70711 3.70711L9 7L9 4C9 3.44771 9.44772 3 10 3C10.5523 3 11 3.44771 11 4L11 12C11 12.5523 10.5523 13 10 13Z"] {
-  d: path("M3.9.8V15.2h1L12.1,8h0L4.9.8h-1Zm1,13V2.3l5.7,5.7a.1.1,0,0,1,0,.1Z");
-}
-
-/* Changing refresh icon on status bar - $statusbarNewRefreshIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M14 2.20711C14 1.76166 13.4614 1.53857 13.1464 1.85356L11.7246 3.27543C11.3372 2.96859 10.911 2.7088 10.4541 2.50391C9.21538 1.94834 7.82481 1.82932 6.50965 2.16629C5.19448 2.50327 4.03248 3.27631 3.2135 4.35912C2.39451 5.44193 1.96697 6.77049 2.00073 8.12771C2.03448 9.48494 2.52754 10.7906 3.39933 11.8314C4.27113 12.8721 5.47012 13.5864 6.80041 13.8576C8.1307 14.1288 9.51363 13.9408 10.7233 13.3244C11.4465 12.9557 12.0823 12.447 12.5968 11.8333C12.6276 11.7965 12.6581 11.7593 12.688 11.7218C12.7896 11.5946 12.886 11.4632 12.9771 11.3278C13.2826 10.8737 13.0562 10.2799 12.558 10.0533C12.1616 9.87286 11.7138 9.98233 11.3753 10.2501C11.3189 10.2948 11.2654 10.3439 11.2158 10.3968C11.1891 10.4252 11.1635 10.4548 11.1391 10.4853C10.7843 10.9298 10.3368 11.2969 9.82334 11.5585C9.01328 11.9714 8.08715 12.0973 7.19628 11.9157C6.30542 11.734 5.50247 11.2557 4.91865 10.5587C4.33482 9.86172 4.00463 8.98735 3.98203 8.07844C3.95942 7.16953 4.24574 6.27982 4.7942 5.55468C5.34265 4.82955 6.12082 4.31185 7.00156 4.08619C7.88231 3.86052 8.81354 3.94023 9.64312 4.31228C9.87802 4.41763 10.1008 4.54465 10.309 4.69096L8.85356 6.14645C8.53857 6.46143 8.76166 7 9.20711 7H14V2.20711Z"] {
-  d: path("M10.2,5.8h4.2V1.3h-1V4a6.6,6.6,0,1,0,.9,6.5l-.9-.4a5.6,5.6,0,1,1-.6-5.3H10.2Z");
-}
-
-/* Changing cancel load icon on status bar - $statusbarNewCancelLoadIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M11.7071 5.70711C12.0976 5.31658 12.0976 4.68342 11.7071 4.29289C11.3166 3.90237 10.6834 3.90237 10.2929 4.29289L8 6.58579L5.70711 4.29289C5.31658 3.90237 4.68342 3.90237 4.29289 4.29289C3.90237 4.68342 3.90237 5.31658 4.29289 5.70711L6.58579 8L4.29289 10.2929C3.90237 10.6834 3.90237 11.3166 4.29289 11.7071C4.68342 12.0976 5.31658 12.0976 5.70711 11.7071L8 9.41421L10.2929 11.7071C10.6834 12.0976 11.3166 12.0976 11.7071 11.7071C12.0976 11.3166 12.0976 10.6834 11.7071 10.2929L9.41421 8L11.7071 5.70711Z"] {
-  d: path("M12.9,12.2,8.8,8.1a.1.1,0,0,1,0-.1l4.1-4.1-.7-.7L8.1,7.2H7.9L3.8,3.1l-.7.7L7.2,7.9a.1.1,0,0,1,0,.1L3.1,12.2l.7.7L7.9,8.8h.1l4.1,4.1Z");
-}
-
-/* Changing homepage icon on status bar - $statusbarNewHomepageIcon */
-
-.toolbar-statusbar .button-toolbar svg path[d="M8 10.5C8.85199 10.5 8.97809 11.1049 8.99676 11.6963C9 11.799 9 11.9013 9 12V14C9 14.5523 9.44772 15 10 15H14C14.5523 15 15 14.5523 15 14V8.41421C15 8.149 14.8946 7.89464 14.7071 7.70711L8.70711 1.70711C8.31658 1.31658 7.68342 1.31658 7.29289 1.70711L1.29289 7.70711C1.10536 7.89464 1 8.149 1 8.41421V14C1 14.5523 1.44772 15 2 15H6C6.55228 15 7 14.5523 7 14V12C7 11.9013 7 11.799 7.00324 11.6963C7.02191 11.1049 7.14801 10.5 8 10.5ZM13 13V8.82843L8 3.82843L3 8.82843V13H5V12L4.99965 11.9448C4.99723 11.6655 4.9906 10.9031 5.28671 10.2122C5.47659 9.76911 5.8086 9.29298 6.35625 8.94816C6.89191 8.61089 7.47399 8.5 8 8.5C8.52601 8.5 9.10809 8.61089 9.64375 8.94816C10.1914 9.29298 10.5234 9.76911 10.7133 10.2122C11.0094 10.9031 11.0028 11.6655 11.0003 11.9448L11 12V13H13ZM6.99038 11.645C6.98978 11.6405 6.98933 11.6384 6.98933 11.6384L6.98953 11.6401C6.98953 11.6401 6.98997 11.6428 6.99038 11.645Z"] {
-  d: path("M8.6,1.9l-.3-.3L8,1.3l-.3.3h0l-6,6v7H6.6V10.4l.8-.8H8.6l.8.8v4.3h4.9v-7Zm4.9,11.9H10.3V10.1L9,8.7H7L5.7,10.1v3.7H2.5V8L8,2.5,13.5,8Z");
 }

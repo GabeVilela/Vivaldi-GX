@@ -24,14 +24,16 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .UrlBar-AddressField,
-.searchfield {
+.searchfield,
+.SearchField-Popup {
   fill : inherit !important;
   color: var(--colorFgIntense);
 }
 
 .UrlBar-AddressField,
 .UrlBar-AddressField form input.url,
-.UrlBar-SearchField {
+.UrlBar-SearchField,
+.toolbar-mainbar .SearchField-Popup .SearchField {
   background-color: var(--colorAccentBg) !important;
   border          : none !important;
   height          : 27px !important;
@@ -42,14 +44,16 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .UrlBar-AddressField:hover,
-.UrlBar-SearchField:hover {
+.UrlBar-SearchField:hover,
+.toolbar-mainbar .SearchField-Popup .SearchField:hover {
   background-color: var(--colorHighlightBgAlpha) !important;
   border          : none !important;
   box-shadow      : none;
 }
 
 .UrlBar-AddressField:focus-within,
-.UrlBar-SearchField:focus-within {
+.UrlBar-SearchField:focus-within,
+.toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
   background-color: var(--colorAccentBgFadedMore) !important;
   border          : none !important;
   box-shadow      : none;
@@ -80,14 +84,15 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .url::selection,
-.UrlBar-SearchField .searchfield-input::selection {
+.UrlBar-SearchField .searchfield-input::selection,
+.toolbar-mainbar .SearchField-Popup .searchfield-input::selection {
   background-color: var(--colorHighlightBg) !important;
   color           : var(--colorHighlightFg) !important;
 }
 
 .UrlBar.toolbar-mainbar .toolbar-droptarget.toolbar-mainbar>.button-toolbar>button:not(.button-textonly),
 .UrlBar.toolbar-mainbar .toolbar-droptarget.toolbar-mainbar>.button-toolbar>button span:not(.button-title),
-.UrlBar.toolbar-mainbar .button-toolbar.profile-popup>button,
+.UrlBar.toolbar-mainbar>.button-toolbar>button,
 .UrlBar.toolbar-mainbar .toolbar-mainbar.toolbar-extensions>.button-toolbar>button {
   --modAddressbarButtonSize: 27px;
   max-width                : var(--modAddressbarButtonSize) !important;
@@ -112,11 +117,11 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   justify-self: center;
 }
 
-.UrlBar.toolbar-mainbar .button-toolbar.profile-popup {
+.UrlBar.toolbar-mainbar>.button-toolbar {
   align-self: center;
 }
 
-.UrlBar.toolbar-mainbar .button-toolbar.profile-popup>button>img,
+.UrlBar.toolbar-mainbar>.button-toolbar>button>img,
 .UrlBar.toolbar-mainbar .toolbar-mainbar.toolbar-extensions>.button-toolbar>button>img {
   height: 14px;
   width : 14px;
@@ -247,7 +252,8 @@ button.button-on .bookmark-outline {
   font-weight: 500;
 }
 
-.toolbar-addressbar .searchfield .toolbar-insideinput:not(.SearchEngineSelect-Icon) button {
+.toolbar-addressbar .searchfield .toolbar-insideinput:not(.SearchEngineSelect-Icon) button,
+.toolbar-mainbar .SearchField-Popup .toolbar-insideinput:not(.SearchEngineSelect-Icon) button {
   margin-right: 5px !important;
 }
 
@@ -322,7 +328,8 @@ button.button-on .bookmark-outline {
   padding-top : 5px !important;
 }
 
-.toolbar-mainbar .searchfield-input {
+.toolbar-mainbar .searchfield-input,
+.toolbar-mainbar .SearchField-Popup .searchfield-input {
   margin-top : -2px !important;
   padding-top: 0;
 }
@@ -341,6 +348,10 @@ button.button-on .bookmark-outline {
   border-top-right-radius   : 0px !important;
   border-bottom-left-radius : 10px !important;
   border-bottom-right-radius: 10px !important;
+}
+
+.OmniLinkItem {
+  --item-height: 36px !important;
 }
 
 .OmniLinkItem--Highlighted,
@@ -364,7 +375,8 @@ button.button-on .bookmark-outline {
   color: var(--colorFgIntense);
 }
 
-.UrlBar-SearchField .OmniLinkItem {
+.UrlBar-SearchField .OmniLinkItem,
+.toolbar-mainbar .SearchField-Popup .OmniLinkItem {
   grid-template-columns: [Url] 1fr [Details] 1fr [Erase] var(--item-height);
 }
 
@@ -379,16 +391,19 @@ button.button-on .bookmark-outline {
 }
 
 .UrlBar-AddressField .OmniDropdown,
-.UrlBar-SearchField .OmniDropdown {
+.UrlBar-SearchField .OmniDropdown,
+.toolbar-mainbar .SearchField-Popup .OmniDropdown {
   top: 22px;
 }
 
 .UrlBar-AddressField .omni-clickable.OmniLinkItem.OmniLinkItem,
-.UrlBar-SearchField .omni-clickable.OmniLinkItem.OmniLinkItem {
+.UrlBar-SearchField .omni-clickable.OmniLinkItem.OmniLinkItem,
+.toolbar-mainbar .SearchField-Popup .omni-clickable.OmniLinkItem.OmniLinkItem {
   height: 36px !important;
 }
 
-.UrlBar-SearchField .toolbar-insideinput {
+.UrlBar-SearchField .toolbar-insideinput,
+.toolbar-mainbar .SearchField-Popup .toolbar-insideinput {
   margin-right: 6px;
 }
 
@@ -414,8 +429,22 @@ span.OmniLinkItem-Details {
   padding         : 6px;
 }
 
-.OmniLinkItem-Favicon > *{
-  border-radius   : 100%;
+.OmniLinkItem-EraseButton svg {
+  width : 22px !important;
+  height: 22px !important;
+}
+
+.OmniLinkItem-EraseButton {
+  height       : 28px !important;
+  width        : 28px !important;
+  padding      : 3px;
+  border-radius: 100% !important;
+  fill         : var(--colorHighlightFgAlpha) !important;
+}
+
+.OmniLinkItem-EraseButton:hover {
+  background-color: var(--colorAccentBgFadedMore);
+  fill            : var(--colorHighlightBgAlpha) !important;
 }
 
 .UrlBar-AddressField>.toolbar-insideinput:first-child,
@@ -462,11 +491,13 @@ progress.pageload-indicator {
   transition: 0.5s;
 }
 
-#main .SearchField nav.menu {
+#main .SearchField nav.menu,
+.toolbar-mainbar .SearchField-Popup nav.menu {
   top: 24px !important;
 }
 
-#main .SearchField nav.menu>ul {
+#main .SearchField nav.menu>ul,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul {
   background-color          : var(--colorAccentBgFadedMore);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
@@ -477,25 +508,30 @@ progress.pageload-indicator {
   border                    : none !important;
 }
 
-#main .SearchField nav.menu>ul:before {
+#main .SearchField nav.menu>ul:before,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul:before {
   content: none !important;
 }
 
-#main .SearchField nav.menu>ul>li {
+#main .SearchField nav.menu>ul>li,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li {
   padding: 0px 5px !important;
 }
 
-#main .SearchField nav.menu>ul>li.selectedItem {
+#main .SearchField nav.menu>ul>li.selectedItem,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li.selectedItem {
   background-color: var(--colorHighlightBgAlpha);
 }
 
-#main .SearchField nav.menu>ul>li a {
+#main .SearchField nav.menu>ul>li a,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li a {
   background-color: transparent !important;
   border          : none;
   height          : 36px;
 }
 
-#main .SearchField nav.menu>ul>li .menu-icon {
+#main .SearchField nav.menu>ul>li .menu-icon,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li .menu-icon {
   background-color: transparent;
   height          : 28px !important;
   width           : 28px !important;
@@ -505,6 +541,18 @@ progress.pageload-indicator {
   border-radius   : 100%;
 }
 
-#main .SearchField nav.menu>ul>li.selectedItem .menu-icon {
+#main .SearchField nav.menu>ul>li.selectedItem .menu-icon,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li.selectedItem .menu-icon {
   background-color: var(--colorAccentBgFadedMore);
+}
+
+.SearchField-Popup {
+  --popupWidth    : 420px !important;
+  left            : -179px;
+  background-color: var(--colorAccentBg);
+}
+
+.SearchField-Popup::before {
+  left               : 96% !important;
+  border-bottom-color: var(--colorAccentBg) !important;
 }
