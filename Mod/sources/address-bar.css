@@ -414,6 +414,10 @@ span.OmniLinkItem-Details {
   padding         : 6px;
 }
 
+.OmniLinkItem-Favicon > *{
+  border-radius   : 100%;
+}
+
 .UrlBar-AddressField>.toolbar-insideinput:first-child,
 .UrlBar-AddressField>.toolbar-insideinput:nth-child(2) {
   position: absolute;
