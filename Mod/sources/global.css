@@ -29,10 +29,11 @@
     border-radius   : 100px !important;
     font-size       : 0px !important;
     padding         : 0px !important;
-    height          : 8px !important;
-    min-width       : 8px !important;
+    height: 5px !important;
+    min-width: 5px !important;
     background-color: var(--colorHighlightBg) !important;
     z-index         : 1;
+    box-shadow: 0 0 0 4px var(--colorBg);
 }
 
 #browser.win .window-buttongroup {

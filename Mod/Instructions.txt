@@ -1,6 +1,0 @@
-To install this mod:
-Follow these instructions https://forum.vivaldi.net/topic/10549/modding-vivaldi
-
-Also, if you don't know how to "download" from GitHub,
-click to open the file, then you can copy everything and paste inside a note pad app.
-Remember to save with the same extension as the original file in GitHub (ex: .css)

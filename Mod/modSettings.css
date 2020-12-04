@@ -1,19 +1,24 @@
 /*
     Welcome, this file contains many stuff that you can toggle on/off
-    To switch something off, just delete it (or turn it into a commentary, if you know how)
 */
 
-/* This one is essential, don't remove it */
-
-@import 'sources/vars.css';
-@import 'sources/global.css';
+/* This one is essential, don"t remove it */
+@import "sources/vars.css";
+@import "sources/global.css";
 /* --- */
+/* These apply to UI compoments
+Removing one of those will remove every mod stylezation in that compoment*/
+@import "sources/address-bar.css";
+@import "sources/bookmarks-bar.css";
+@import "sources/tab-bar.css";
+@import "sources/status-bar.css";
+@import "sources/sidebar.css";
+@import "sources/speed-dial.css";
+@import "sources/quick_commands.css";
+@import "sources/modals.css";
 
-@import 'sources/address-bar.css';
-@import 'sources/bookmarks-bar.css';
-@import 'sources/tab-bar.css';
-@import 'sources/status-bar.css';
-@import 'sources/sidebar.css';
-@import 'sources/speed-dial.css';
-@import 'sources/quick_commands.css';
-@import 'sources/modals.css';
+/* Snippets
+Those are additional stuff that can be switched ON/OFF without harm*/
+@import "snippets/hibernated_tabs_indicator.css";
+@import "snippets/ominibox_rounded_favicons.css";
+/*TURNED OFF > @import "snippets/ominibox_rounded_favicons.css"; <*/
