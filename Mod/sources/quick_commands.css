@@ -71,3 +71,7 @@ img.quick-command-favicon {
 .quick-commands>div>div {
     max-width: 50vw !important;
 }
+
+.quick-command-container .quick-commands .quick-command[data-selected] {
+    background-color: var(--colorHighlightBgAlpha) !important;
+}

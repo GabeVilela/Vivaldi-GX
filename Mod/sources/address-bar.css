@@ -26,7 +26,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar-AddressField,
 .searchfield,
 .SearchField-Popup {
-  fill : inherit !important;
+  fill : var(--colorAccentFg) !important;
   color: var(--colorFgIntense);
 }
 
@@ -73,8 +73,8 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .create-bookmark button svg {
-  fill          : #d3d8db !important;
-  stroke        : #d3d8db;
+  fill          : var(--colorAccentFg) !important;
+  stroke        : var(--colorAccentFg);
   stroke-width  : 0.8px;
   stroke-opacity: 0.5;
 }
@@ -146,11 +146,13 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   background-color: var(--colorAccentBg) !important;
   border          : none !important;
   box-shadow      : none !important;
+  color           : var(--colorAccentFg) !important;
 }
 
 .UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea:focus-within,
 .UrlBar-AddressField .addbookmark-cardwrapper .cardview input:focus-within {
   background-color: var(--colorBg) !important;
+  color           : var(--colorFg) !important;
 }
 
 .UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea:not(:focus-within):hover,
@@ -176,7 +178,7 @@ button.button-on .bookmark-outline {
   width           : unset !important;
   z-index         : 1 !important;
   bottom          : inherit !important;
-  color           : var(--colorAccentBgFadedMore) !important;
+  color           : var(--colorAccentFgAlpha) !important;
   font-size       : 19px !important;
 }
 
@@ -193,6 +195,10 @@ button.button-on .bookmark-outline {
 .UrlBar-AddressField:focus-within::before,
 .UrlBar-AddressField:focus-within::after {
   color: transparent !important;
+}
+
+.create-qr-code button svg {
+  fill: inherit !important;
 }
 
 .toolbar-insideinput>.button-toolbar button:hover:not(.button-pressed) {
@@ -326,6 +332,7 @@ button.button-on .bookmark-outline {
   padding-left: 18px !important;
   margin-top  : 0px !important;
   padding-top : 5px !important;
+  color       : var(--colorAccentFg);
 }
 
 .toolbar-mainbar .searchfield-input,
@@ -342,8 +349,8 @@ button.button-on .bookmark-outline {
 .OmniDropdown {
   box-shadow                : none;
   background-color          : var(--colorAccentBgFadedMore) !important;
-  color                     : var(--colorFg);
-  fill                      : var(--colorFg);
+  color                     : var(--colorAccentFgFaded);
+  fill                      : var(--colorAccentFg);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
   border-bottom-left-radius : 10px !important;
@@ -357,8 +364,8 @@ button.button-on .bookmark-outline {
 .OmniLinkItem--Highlighted,
 .OmniLinkItem--Highlighted:hover,
 .OmniLinkItem:not(.OmniLinkItem--Highlighted):hover {
-  color           : var(--colorAccentFg);
-  fill            : var(--colorAccentFg);
+  color           : var(--colorHighlightFg);
+  fill            : var(--colorHighlightFg);
   background-color: var(--colorHighlightBgAlpha);
 }
 
@@ -370,9 +377,10 @@ button.button-on .bookmark-outline {
   margin-left: 15px;
 }
 
-.OmniLinkItem--Highlighted .OmniLinkItem-Url .OmniLinkItem--Highlighted:hover .OmniLinkItem-Url,
+.OmniLinkItem--Highlighted .OmniLinkItem-Url,
+.OmniLinkItem--Highlighted:hover .OmniLinkItem-Url,
 .OmniLinkItem:not(.OmniLinkItem--Highlighted):hover .OmniLinkItem-Url {
-  color: var(--colorFgIntense);
+  color: var(--colorHiglightFg) !important;
 }
 
 .UrlBar-SearchField .OmniLinkItem,

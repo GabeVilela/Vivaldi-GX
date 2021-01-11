@@ -19,7 +19,7 @@
     background-color: var(--WButtonHoverBg) !important;
 }
 
-.button-popup {
+:not(.create-bookmark) > .button-popup {
     background-color: var(--colorAccentBgDark);
 }
 
