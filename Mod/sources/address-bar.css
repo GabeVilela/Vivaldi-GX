@@ -135,6 +135,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 
 .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
   margin-right: 3px;
+  height: fit-content;
 }
 
 .toolbar-mainbar.toolbar-extensions .extensionPopupIcons path {
