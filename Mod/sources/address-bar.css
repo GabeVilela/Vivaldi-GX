@@ -72,6 +72,10 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   stroke: var(--colorHighlightBg);
 }
 
+.create-qr-code {
+  margin-right: 3px !important;
+}
+
 .create-bookmark button svg {
   fill          : var(--colorAccentFg) !important;
   stroke        : var(--colorAccentFg);
@@ -139,29 +143,6 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 
 .toolbar-mainbar.toolbar-extensions .extensionPopupIcons path {
   d: path("M16.786,12.794,13.523,9.531l-.707.707,2.556,2.557a.283.283,0,0,1,.074.178l-2.389.011a.286.286,0,0,0-.078-.19L9.715,9.531l-.707.707,2.556,2.557a.291.291,0,0,1,0,.411L9.008,15.762l.707.707,3.263-3.264a.282.282,0,0,0,.079-.221l2.389-.012a.278.278,0,0,1-.074.233l-2.556,2.557.707.707,3.263-3.264A.291.291,0,0,0,16.786,12.794Z");
-}
-
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea,
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview input {
-  background-color: var(--colorAccentBg) !important;
-  border          : none !important;
-  box-shadow      : none !important;
-  color           : var(--colorAccentFg) !important;
-}
-
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea:focus-within,
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview input:focus-within {
-  background-color: var(--colorBg) !important;
-  color           : var(--colorFg) !important;
-}
-
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview textarea:not(:focus-within):hover,
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview input:not(:focus-within):hover {
-  background-color: var(--colorAccentBgAlpha) !important;
-}
-
-.UrlBar-AddressField .addbookmark-cardwrapper .cardview select {
-  border: none !important;
 }
 
 button.button-on .bookmark-animated-fill,
@@ -294,8 +275,8 @@ button.button-on .bookmark-outline {
 
 .SiteInfoButton.secure,
 .SiteInfoButton.certified {
-  fill : var(--colorFg) !important;
-  color: var(--colorFg) !important;
+  fill: var(--colorAccentFg) !important;
+  color: var(--colorAccentFg) !important;
 }
 
 .button-addressfield.SiteInfoButton.internal svg {
@@ -349,7 +330,7 @@ button.button-on .bookmark-outline {
 .OmniDropdown {
   box-shadow                : none;
   background-color          : var(--colorAccentBgFadedMore) !important;
-  color                     : var(--colorAccentFgFaded);
+  color: var(--colorAccentFg);
   fill                      : var(--colorAccentFg);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
@@ -467,11 +448,12 @@ span.OmniLinkItem-Details {
 }
 
 .UrlBar-PrivateWindowIndicator {
-  background-color: transparent;
-  border          : 1px solid var(--colorFg);
+  background-color: var(--colorHighlightBg);
+  border: 1px solid var(--colorHightlightFg);
   height          : 19px;
   align-self      : center;
   margin-left     : 8px;
+  color: var(--colorHighlightFg);
 }
 
 .UrlBar-UrlFieldWrapper .UrlField>.UrlFragment-Wrapper {
@@ -563,4 +545,8 @@ progress.pageload-indicator {
 .SearchField-Popup::before {
   left               : 96% !important;
   border-bottom-color: var(--colorAccentBg) !important;
+}
+.UrlFragment-Wrapper--ShouldHighlight {
+    --HighlightColor: var(--colorAccentFg) !important;
+    --LowlightColor: var(--colorAccentFgFaded) !important;
 }
