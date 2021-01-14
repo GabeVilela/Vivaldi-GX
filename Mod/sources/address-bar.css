@@ -9,7 +9,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar.toolbar-mainbar.toolbar-large .toolbar:first-child button:hover,
 .UrlBar.toolbar-mainbar>.button-toolbar>button:hover,
 .UrlBar.toolbar-mainbar>.toolbar-extensions button:hover {
-  background-color: var(--colorBgAlphaHeavier) !important;
+  background-color: var(--colorHighlightBgAlpha) !important;
   background-image: none !important;
 }
 
@@ -70,6 +70,10 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 
 .create-bookmark button.button-on svg {
   stroke: var(--colorHighlightBg);
+}
+
+.button-toolbar.password-icon {
+    margin-right: 3px;
 }
 
 .create-qr-code {

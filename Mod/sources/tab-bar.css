@@ -274,9 +274,9 @@
 }
 
 .tab-group .tab-header>.title {
-  transform  : scale(0.9) !important;
-  margin-left: -10px;
+  margin-left: -3px;
   margin-top : 5px;
+  font-size: 11px;
 }
 
 .tab-group .tab-header>.close {
@@ -468,7 +468,7 @@ div#tabs-container {
 
 .tab-group.audio-on .title,
 .tab-group.audio-muted .title {
-  margin-left: 3px;
+  margin-left: 8px;
 }
 
 #tabs-subcontainer {

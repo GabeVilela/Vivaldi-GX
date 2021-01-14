@@ -63,6 +63,6 @@ button.ClockPopup-Preset:hover+button.ClockPopup-Preset-Clear {
 }
 
 .toolbar-statusbar .page-zoom-controls button:disabled>.button-title {
-  color  : var(--colorFg) !important;
+  color: var(--colorHighlightBg) !important;
   opacity: 0.3;
 }
