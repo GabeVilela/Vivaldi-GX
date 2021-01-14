@@ -116,15 +116,12 @@
   filter: brightness(1) contrast(1) opacity(1) !important;
 }
 
-.tab-strip {
+#browser.tabs-top.address-top .tab-strip {
   --modMaskT: -100%;
   --modMaskB: 100%;
   --modMaskL: 0%;
   --modMaskR: 100%;
-  clip-path : polygon(var(--modMaskL) var(--modMaskT),
-      var(--modMaskR) var(--modMaskT),
-      var(--modMaskR) var(--modMaskB),
-      var(--modMaskL) var(--modMaskB));
+  clip-path : polygon(var(--modMaskL) var(--modMaskT), var(--modMaskR) var(--modMaskT), var(--modMaskR) var(--modMaskB), var(--modMaskL) var(--modMaskB));
 }
 
 #tabs-container .tab-strip:after {
@@ -177,7 +174,6 @@
 .tab-position .tab.unread .close:not(:hover) svg {
   transform: scale(0);
 }
-
 
 .tabs-top .tab.active:not(.marked):not(.tab-mini):before,
 .tabs-top .tab.active:not(.marked):not(.tab-mini):after,
@@ -251,7 +247,6 @@
   border-left-color : transparent !important;
   border-right-color: transparent !important;
 }
-
 
 .tab-group {
   border-radius: 0px !important;
@@ -355,7 +350,6 @@ div#tabs-container {
 .tab-position .tab:not(.active):hover::before {
   background-color: transparent;
 }
-
 
 #vivaldi-tooltip .active.tooltip-item .thumbnail-caption {
   background-color: var(--GXcolorAccent);
@@ -547,4 +541,13 @@ svg.svg-tab-stack {
 
 .subcontainer-lock button {
   fill: var(--colorHighlightBg);
+}
+
+#browser.tabs-top:not(.address-top).tabs-at-edge #header {
+  min-height: 30px !important;
+  height    : 30px !important;
+}
+
+#browser.tabs-top:not(.address-top).tabs-at-edge #tabs-container {
+  border-bottom: none !important;
 }

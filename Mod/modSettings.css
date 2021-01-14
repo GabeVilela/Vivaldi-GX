@@ -16,6 +16,7 @@ Removing one of those will remove every mod stylezation in that compoment*/
 @import "sources/speed-dial.css";
 @import "sources/quick_commands.css";
 @import "sources/modals.css";
+@import "sources/title-bar.css";
 
 /* Snippets
 Those are additional stuff that can be switched ON/OFF without harm*/
