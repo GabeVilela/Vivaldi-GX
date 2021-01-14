@@ -1,15 +1,30 @@
+#browser.tabs-top.address-top div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
+  margin-left: 40px;
+  border-left: 1px solid var(--colorHighlightBg) !important;
+}
+
 div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
-  margin-left   : 40px;
-  border-left   : 1px solid var(--colorHighlightBg) !important;
   padding-top   : 3px;
   padding-bottom: 3px;
   height        : 39px !important;
 }
 
+.toolbar-extensions .ExtensionIcon--Hidden {
+  background-color: transparent !important;
+}
+
+.toolbar-extensions>.button-toolbar:not(:first-child).ExtensionIcon {
+  margin-left: 4px !important;
+}
+
+.toolbar-extensions>.button-toolbar:not(.ExtensionIcon) {
+  margin-left: 5px !important;
+}
+
 .UrlBar.toolbar-mainbar.toolbar-large .toolbar:first-child button:hover,
 .UrlBar.toolbar-mainbar>.button-toolbar>button:hover,
-.UrlBar.toolbar-mainbar>.toolbar-extensions button:hover {
-  background-color: var(--colorHighlightBgAlpha) !important;
+.UrlBar.toolbar-mainbar>.toolbar-extensions>div>button:hover {
+  background-color: hsl(0 0% 0% / 0.20) !important;
   background-image: none !important;
 }
 
@@ -72,12 +87,8 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   stroke: var(--colorHighlightBg);
 }
 
-.button-toolbar.password-icon {
-    margin-right: 3px;
-}
-
-.create-qr-code {
-  margin-right: 3px !important;
+.UrlBar-AddressField>.toolbar-insideinput.toolbar-small>.button-toolbar:not(:last-of-type) {
+  margin-right: 3px;
 }
 
 .create-bookmark button svg {
@@ -89,6 +100,10 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 
 .create-bookmark button svg path.add-bookmark-shadow {
   display: none !important;
+}
+
+path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
+  d: path("M1.5,3h13V4.3H1.5Zm0,4.2h13V8.5H1.5Zm0,4.6H9.3v1.3H1.5Z") !important;
 }
 
 .url::selection,
@@ -131,9 +146,25 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 
 .UrlBar.toolbar-mainbar>.button-toolbar>button>img,
 .UrlBar.toolbar-mainbar .toolbar-mainbar.toolbar-extensions>.button-toolbar>button>img {
-  height: 14px;
-  width : 14px;
-  flex  : 0 0 14px;
+  height: 16px;
+  width : 16px;
+  flex  : 0 0 16px;
+}
+
+.toolbar-extensions .button-badge {
+  border-radius : 0px !important;
+  top           : unset !important;
+  bottom        : 0px;
+  right         : 0px !important;
+  left          : unset !important;
+  box-shadow    : none !important;
+  text-shadow   : none !important;
+  padding       : 0px 3px 1px 3px !important;
+  height        : 12px !important;
+  border        : none !important;
+  min-width     : 12px !important;
+  text-rendering: optimizeLegibility;
+  font-size     : 10.1px;
 }
 
 .UrlBar.toolbar-mainbar .toolbar-droptarget.toolbar-mainbar>.button-toolbar>button svg.ClockIcon {
@@ -279,7 +310,7 @@ button.button-on .bookmark-outline {
 
 .SiteInfoButton.secure,
 .SiteInfoButton.certified {
-  fill: var(--colorAccentFg) !important;
+  fill : var(--colorAccentFg) !important;
   color: var(--colorAccentFg) !important;
 }
 
@@ -334,7 +365,7 @@ button.button-on .bookmark-outline {
 .OmniDropdown {
   box-shadow                : none;
   background-color          : var(--colorAccentBgFadedMore) !important;
-  color: var(--colorAccentFg);
+  color                     : var(--colorAccentFg);
   fill                      : var(--colorAccentFg);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
@@ -448,16 +479,16 @@ span.OmniLinkItem-Details {
 }
 
 .toolbar-small.toolbar-insideinput .button-toolbar:last-child {
-  margin-left: 26px;
+  margin-left: 23px;
 }
 
 .UrlBar-PrivateWindowIndicator {
   background-color: var(--colorHighlightBg);
-  border: 1px solid var(--colorHightlightFg);
+  border          : 1px solid var(--colorHightlightFg);
   height          : 19px;
   align-self      : center;
   margin-left     : 8px;
-  color: var(--colorHighlightFg);
+  color           : var(--colorHighlightFg);
 }
 
 .UrlBar-UrlFieldWrapper .UrlField>.UrlFragment-Wrapper {
@@ -550,7 +581,8 @@ progress.pageload-indicator {
   left               : 96% !important;
   border-bottom-color: var(--colorAccentBg) !important;
 }
+
 .UrlFragment-Wrapper--ShouldHighlight {
-    --HighlightColor: var(--colorAccentFg) !important;
-    --LowlightColor: var(--colorAccentFgFaded) !important;
+  --HighlightColor: var(--colorAccentFg) !important;
+  --LowlightColor : var(--colorAccentFgFaded) !important;
 }
