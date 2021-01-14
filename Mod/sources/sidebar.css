@@ -104,6 +104,19 @@
   background-image: linear-gradient(to bottom, var(--colorHighlightBg), transparent 100%);
   z-index         : 1;
 }
+#panels-container[style*="width: 0px;"] + #webview-container{
+  border-top: 1px solid var(--colorAccentBg);
+}
+#browser.tabs-top #panels-container[style*="width: 0px;"] + #webview-container:before {
+  content         : ' ';
+  position        : absolute;
+  height: 1px;
+  width: 41px;
+  left: 0px;
+  top: -1px;
+  background-color: var(--colorHighlightBg);
+  z-index: 1;
+}
 
 #switch>button {
   border       : none !important;
