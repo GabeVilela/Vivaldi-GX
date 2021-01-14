@@ -1,4 +1,4 @@
-.tab {
+#tabs-container .tab {
   border-width       : 1px 0px 0px 0px;
   border-style       : solid;
   border-top-color   : transparent;
@@ -11,15 +11,22 @@
   border-bottom-color: transparent;
 }
 
+#tabs-subcontainer .tab.active .tab-header {
+  padding-left: 5px !important;
+  padding-top : 5px !important;
+}
 
 #tabs-subcontainer .tab.active {
-  border-width: 0px 1px;
+  border-width: 1px 1px 0px 1px;
   border-style: solid;
   border-color: var(--colorHighlightBg);
 }
 
+#tabs-subcontainer .tab.active .tab-header>.close {
+  margin-right: 5px !important;
+}
 
-.tab.active .tab-header {
+#tabs-container .tab.active .tab-header {
   padding-left: 5px !important;
 }
 
@@ -41,12 +48,25 @@
   clip-path: polygon(7px 0%, 100% 0, 100% 100%, 0 100%, 0% 7px);
 }
 
+#tabs-container[style*="flex-grow: 0;"] .tab.active {
+  clip-path       : none !important;
+  border-radius   : 3px !important;
+  background-image: none !important;
+}
+
+
 #tabs-container .tab:not(.tab-group).active {
   background-image: linear-gradient(135deg, var(--colorHighlightBg) 4.5px, transparent 0px);
 }
 
-#tabs-container .tab-position[style*="z-index: 2;"]:after,
-#tabs-container .tab-position[style*="z-index: 3;"]:after {
+#tabs-container[style*="flex-grow: 0;"] .tab:not(.tab-group).active {
+  background-color: var(--colorHighlightBg) !important;
+}
+
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:2;"]:after,
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:3;"]:after,
+#tabs-subcontainer .tab-position[style*="--ZIndex:2;"]:after,
+#tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:after {
   --modLineWidth  : 25vw;
   content         : " ";
   background-image: linear-gradient(to right, var(--colorHighlightBg), transparent);
@@ -57,30 +77,32 @@
   bottom          : 0px;
 }
 
-#tabs-container .tab-strip>span:nth-child(1)>.tab-position[style*="z-index: 2;"]:after,
-#tabs-container .tab-strip>span:nth-child(1)>.tab-position[style*="z-index: 3;"]:after,
-#tabs-container .tab-strip>span:nth-child(2)>.tab-position[style*="z-index: 2;"]:after,
-#tabs-container .tab-strip>span:nth-child(2)>.tab-position[style*="z-index: 3;"]:after {
+.tab-strip>span:nth-child(1)>.tab-position[style*="--ZIndex:2;"]:after,
+.tab-strip>span:nth-child(1)>.tab-position[style*="--ZIndex:3;"]:after,
+.tab-strip>span:nth-child(2)>.tab-position[style*="--ZIndex:2;"]:after,
+.tab-strip>span:nth-child(2)>.tab-position[style*="--ZIndex:3;"]:after {
   --modLineWidth: 50vw !important;
 }
 
-#tabs-container .tab-strip>span:nth-child(3)>.tab-position[style*="z-index: 2;"]:after,
-#tabs-container .tab-strip>span:nth-child(3)>.tab-position[style*="z-index: 3;"]:after {
+.tab-strip>span:nth-child(3)>.tab-position[style*="--ZIndex:2;"]:after,
+.tab-strip>span:nth-child(3)>.tab-position[style*="--ZIndex:3;"]:after {
   --modLineWidth: 40vw !important;
 }
 
-#tabs-container .tab-strip>span:nth-child(4)>.tab-position[style*="z-index: 2;"]:after,
-#tabs-container .tab-strip>span:nth-child(4)>.tab-position[style*="z-index: 3;"]:after {
+.tab-strip>span:nth-child(4)>.tab-position[style*="--ZIndex:2;"]:after,
+.tab-strip>span:nth-child(4)>.tab-position[style*="--ZIndex:3;"]:after {
   --modLineWidth: 35vw !important;
 }
 
-#tabs-container .tab-strip>span:nth-child(5)>.tab-position[style*="z-index: 2;"]:after,
-#tabs-container .tab-strip>span:nth-child(5)>.tab-position[style*="z-index: 3;"]:after {
+.tab-strip>span:nth-child(5)>.tab-position[style*="--ZIndex:2;"]:after,
+.tab-strip>span:nth-child(5)>.tab-position[style*="--ZIndex:3;"]:after {
   --modLineWidth: 30vw !important;
 }
 
-#tabs-container .tab-position[style*="z-index: 2;"]:before,
-#tabs-container .tab-position[style*="z-index: 3;"]:before {
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:2;"]:before,
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:3;"]:before,
+#tabs-subcontainer .tab-position[style*="--ZIndex:2;"]:before,
+#tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:before {
   content         : " ";
   background-color: var(--colorHighlightBg);
   width           : 100vw;
@@ -90,7 +112,7 @@
   bottom          : 0px;
 }
 
-.tab-position[style*="z-index: 3;"] {
+.tab-position[style*="--ZIndex:3;"] {
   filter: brightness(1) contrast(1) opacity(1) !important;
 }
 
@@ -165,21 +187,26 @@
   content           : none;
 }
 
-.tab.marked .tab-selection>.outer {
+.tab.marked .svg-tab-selection>.outer {
   stroke: transparent !important;
 }
 
-.tab.marked .tab-selection>.inner {
+.tab.marked .svg-tab-selection>.inner {
   stroke: transparent !important;
   fill  : var(--colorHighlightBgAlpha) !important;
+}
+
+#tabs-container[style*="flex-grow: 0;"] .tab.active.marked {
+  background-color: transparent !important;
+  border          : 2px solid var(--colorHighlightBg) !important;
 }
 
 .tab.marked:not(.active) .tab-indicator.marked.active.tab-indicator.marked:after {
   content: none !important;
 }
 
-.tab-group-indicator .tab-indicator.marked .tab-selection>.outer,
-.tab-group-indicator .tab-indicator.marked .tab-selection>.inner {
+.tab-group-indicator .tab-indicator.marked .svg-tab-selection>.outer,
+.tab-group-indicator .tab-indicator.marked .svg-tab-selection>.inner {
   stroke: none !important;
   fill  : none !important;
 }
@@ -276,7 +303,7 @@
 .tab-group .tab-header>.title {
   margin-left: -3px;
   margin-top : 5px;
-  font-size: 11px;
+  font-size  : 11px;
 }
 
 .tab-group .tab-header>.close {
@@ -316,13 +343,13 @@
 }
 
 div#tabs-container {
-  margin-left     : 40px;
-  padding-left    : 0px !important;
+  margin-left : 40px;
+  padding-left: 0px !important;
 }
 
 #tabs-tabbar-container {
   background-image: linear-gradient(to right, var(--colorBg) 40px, transparent 70px), linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
-  clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
+  clip-path       : polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
 }
 
 .tab-position .tab:not(.active):hover::before {
@@ -387,6 +414,10 @@ div#tabs-container {
   fill  : var(--colorHighlightBg);
 }
 
+#tabs-container[style*="flex-grow: 0;"] .newtab button svg {
+  fill: var(--colorFg) !important;
+}
+
 .newtab button {
   opacity: 1 !important;
 }
@@ -398,6 +429,20 @@ div#tabs-container {
 .newtab>button:hover {
   background-color: var(--colorHighlightBgAlpha) !important;
   border          : none !important;
+}
+
+#tabs-container[style*="flex-grow: 0;"] .tab:not(.active):hover,
+#tabs-container[style*="flex-grow: 0;"] .newtab>button:hover {
+  background-color: var(--colorAccentBgAlpha) !important;
+}
+
+.button-toolbar.newtab {
+  top: 3px !important;
+}
+
+#tabs-subcontainer .button-toolbar.newtab {
+  top : 4px !important;
+  left: calc(var(--PositionX) - 1px) !important;
 }
 
 .toolbar-tabbar.sync-and-trash-container button svg {
@@ -420,7 +465,7 @@ div#tabs-container {
   min-height   : 22px !important;
   border-radius: 2px !important;
   margin-left  : 3px;
-  margin-bottom: 3px;
+  margin-bottom: 0px;
 }
 
 .tab:not(.tab-group) .tab-audio {
@@ -472,23 +517,17 @@ div#tabs-container {
 }
 
 #tabs-subcontainer {
-  margin-left : 40px;
-  margin-top  : -1px;
-  border-width: 1px 0px 1px 1px !important;
-  border-color: var(--colorHighlightBg) !important;
-  border-style: solid !important;
-  box-shadow  : none !important;
-  z-index     : 1;
+  margin-left     : 40px;
+  margin-top      : 1px;
+  border          : none !important;
+  box-shadow      : none !important;
+  z-index         : 1;
   background-color: transparent;
-}
-
-#tabs-subcontainer .tab-strip {
-  margin-left: -1px !important;
 }
 
 .tabs-top .tab-position .tab.insubstrip,
 .tabs-bottom .tab-position .tab.insubstrip {
-  margin: 0px !important;
+  margin: 0px 1px 0px 0px !important;
 }
 
 svg.svg-tab-stack {
@@ -496,10 +535,16 @@ svg.svg-tab-stack {
 }
 
 .stack-counter {
-  align-self: center;
+  align-self      : center;
   background-color: var(--colorHighlightBg) !important;
-  color: var(--colorHighlightFg) !important;
+  color           : var(--colorHighlightFg) !important;
 }
+
+.tab.active .stack-counter {
+  background-color: var(--colorHighlightBgUnfocused) !important;
+  color           : var(--colorHighlightFg) !important;
+}
+
 .subcontainer-lock button {
-    fill: var(--colorHighlightBg);
+  fill: var(--colorHighlightBg);
 }
