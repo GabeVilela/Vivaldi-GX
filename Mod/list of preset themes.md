@@ -6,14 +6,19 @@
   - Transparent tabs: Enabled
   - Border radius: 5px
 
+PS: I recommend using colors that have 3% of lightness for background colors.
+And for Accent colors, 8% of lightness.
+
+TIP: If you click in the bottom right corner of the Vivaldi color picker, it will open the Chromium's color picker,
+which allows you to pick colors in the HSL color representation
 
 ## Gabe vilela's custom themes
 
 - Atom Dark
-  - Bg: #0e0f16
-  - Fg: #e6e9eb
+  - Bg: #060609
+  - Fg: #d9d9d9
   - Hl: #568af2
-  - Ac: #282c34
+  - Ac: #121417
 
 - 47
   - Bg: #0f0e15
@@ -29,74 +34,76 @@
 
 ## Opera's custom themes
 
+*Each theme has an alternative Accent color for its "private windows" version*
+
 - GX Classic
   - Bg: #070609
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #FA1E4E
-  - Ac: #251F33
+  - Ac: #121019 - #242032
 
 - Ultraviolet
   - Bg: #05050B
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #A970FF
-  - Ac: #1D1839
+  - Ac: #0E0C1D - #1C183A
 
 - Frutti Di Mare
   - Bg: #05060B
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #FF7070
-  - Ac: #181E39
+  - Ac: #0C0F1D - #181E3A
 
 - Purple Haze
   - Bg: #08030D
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #C4FF70
-  - Ac: #2B0F43
+  - Ac: #150721 - #2B0E43
 
 - Vaporwave
   - Bg: #0B040B
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #47FFE7
-  - Ac: #3C153A
+  - Ac: #1E0B1D - #3C163A
 
 - Rose Quartz
   - Bg: #0B0507
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #FF708D
-  - Ac: #391826
+  - Ac: #1D0C13 - #3A1826
 
 - Coming Soon
   - Bg: #000E0F
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #FDF008
-  - Ac: #004852
+  - Ac: #002429 - #004852
 
 - Hackerman
   - Bg: #060907
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #33FF4E
-  - Ac: #213123
+  - Ac: #101811 - #213123
 
 - Lambda
   - Bg: #070808
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #FF9900
-  - Ac: #262C2A
+  - Ac: #131615 - #262C2A
 
 - After Eight
   - Bg: #090807
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #5AEDBC
-  - Ac: #2E2824
+  - Ac: #171412 - #2E2824
 
 - Pay-To-Win
   - Bg: #090806
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #DEB768
-  - Ac: #2F2B22
+  - Ac: #181511 - #302A22
 
 - White Wolf
   - Bg: #080808
-  - Fg: #E6E9EB
+  - Fg: #D9D9D9
   - Hl: #CCCCCC
-  - Ac: #292929
+  - Ac: #141414 - #292929
