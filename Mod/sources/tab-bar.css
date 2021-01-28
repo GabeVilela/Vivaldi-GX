@@ -20,7 +20,6 @@
 }
 
 .tab .close {
-    display         : none !important;
     background-color: transparent !important;
     min-width       : 17px !important;
     min-height      : 17px !important;
@@ -105,9 +104,6 @@
     bottom          : 0px;
 }
 
-.tab:not(.tab-small) .close {
-    display: inline-block !important;
-}
 
 #browser:not(.alt-tabs) #tabs-container .tab.active .close {
     margin-right: 5px !important;
