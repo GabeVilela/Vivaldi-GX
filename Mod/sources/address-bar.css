@@ -585,3 +585,7 @@ progress.pageload-indicator {
   --HighlightColor: var(--colorAccentFg) !important;
   --LowlightColor : var(--colorAccentFgFaded) !important;
 }
+
+.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large {
+  height: 27px !important;
+}
