@@ -229,9 +229,7 @@ button.button-on .bookmark-outline {
   flex  : 0 0 15px !important;
 }
 
-/* the > avoid applying in the adblocker popup */
-
-.toolbar-insideinput>.button-toolbar>button {
+.toolbar.toolbar-small.toolbar-insideinput .button-toolbar>button {
   border: none !important;
   height: 19px !important;
   width : 19px !important;

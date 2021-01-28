@@ -32,6 +32,8 @@
 
 .quick-command-search-hint {
     background-color: var(--colorAccentBgFadedMore);
+    opacity: 1 !important;
+    color: var(--colorFgFadedMore);
 }
 
 span.view.quick-command-url {
