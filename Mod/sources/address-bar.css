@@ -78,7 +78,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   display: none !important;
 }
 
-.toolbar.toolbar-small.toolbar-insideinput {
+.toolbar.toolbar-small.toolbar-insideinput:last-of-type {
   margin-top  : 0px;
   margin-right: 9px;
 }
@@ -218,7 +218,8 @@ button.button-on .bookmark-outline {
   fill: inherit !important;
 }
 
-.toolbar-insideinput>.button-toolbar button:hover:not(.button-pressed) {
+.toolbar-insideinput>.button-toolbar button:hover:not(.button-pressed),
+.UrlBar-AddressField>.BookmarkButton:hover {
   border-radius   : 0px !important;
   background-color: hsla(0, 0%, 100%, 0.15) !important;
 }
@@ -229,7 +230,9 @@ button.button-on .bookmark-outline {
   flex  : 0 0 15px !important;
 }
 
-.toolbar.toolbar-small.toolbar-insideinput .button-toolbar>button {
+.toolbar.toolbar-small.toolbar-insideinput .button-toolbar>button,
+.UrlBar-AddressField>.BookmarkButton,
+.UrlBar-AddressField>.toolbar-insideinput:first-child button {
   border: none !important;
   height: 19px !important;
   width : 19px !important;
@@ -278,12 +281,14 @@ button.button-on .bookmark-outline {
   margin-right: 5px !important;
 }
 
-.toolbar-insideinput>div>.button-pressed {
+.toolbar-insideinput>div>.button-pressed,
+.UrlBar-AddressField>.BookmarkButton.BookmarkButton--Active {
   background-color: #6f7e85 !important;
   border          : none !important;
 }
 
-.toolbar-insideinput>div>.button-pressed:hover {
+.toolbar-insideinput>div>.button-pressed:hover,
+.UrlBar-AddressField>.BookmarkButton.BookmarkButton--Active:hover {
   background-color: #8b989e !important;
   border          : none !important;
 }
@@ -477,7 +482,7 @@ span.OmniLinkItem-Details {
   z-index : 2;
 }
 
-.toolbar-small.toolbar-insideinput .button-toolbar:last-child {
+.UrlBar-AddressField>.toolbar-small.toolbar-insideinput:last-of-type .button-toolbar:last-child {
   margin-left: 23px;
 }
 
@@ -588,4 +593,37 @@ progress.pageload-indicator {
 
 .toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large {
   height: 27px !important;
+}
+
+.UrlBar.toolbar.toolbar-mainbar.toolbar-large::before {
+  background-color: var(--colorBgAlphaBlur);
+  backdrop-filter : var(--backgroundBlur);
+  content         : " ";
+  width           : 40px;
+  height          : 39px;
+  position        : fixed;
+  left            : 0;
+  z-index         : 0;
+}
+
+.UrlBar-AddressField>.BookmarkButton button>span.button-title {
+  display: none !important;
+}
+
+.BookmarkButton-Button>button {
+  margin-right: 1px !important;
+  margin-left : 0px !important;
+}
+
+.UrlBar-AddressField .BookmarkButton {
+  margin-right: 4px;
+}
+
+.toolbar.toolbar-small.toolbar-insideinput:not(:last-of-type) {
+  margin-right: 4px;
+}
+
+.UrlBar-AddressField>.toolbar-insideinput .button-toolbar button,
+.UrlBar-AddressField .BookmarkButton {
+  border-radius: 0px !important;
 }

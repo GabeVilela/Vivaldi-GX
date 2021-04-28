@@ -19,27 +19,27 @@
     background-color: var(--WButtonHoverBg) !important;
 }
 
-.UrlBar .button-popup {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup {
     background-color: var(--colorAccentBgDark);
     color           : var(--colorAccentFg);
 }
 
-.UrlBar .button-popup footer {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup footer {
     background: var(--colorAccentBgDarker) !important;
 }
 
 /* - */
 /* Normal */
-.UrlBar .button-popup:not(.SearchField-Popup) input,
-.UrlBar .button-popup:not(.SearchField-Popup) button,
-.UrlBar .button-popup textarea {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) input,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) button,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup textarea {
     background-color: var(--colorAccentBgDarker) !important;
     background-image: none !important;
     border-color    : var(--colorAccentBg) !important;
     color           : var(--colorAccentFgFaded) !important;
 }
 
-.UrlBar .button-popup select {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup select {
     --modColorSelectMask: var(--colorAccentBgDarker);
     background-color    : var(--colorAccentBgDarker) !important;
     border-color        : var(--colorAccentBg) !important;
@@ -48,41 +48,41 @@
 }
 
 /* Hover */
-.UrlBar .button-popup:not(.SearchField-Popup) input:hover,
-.UrlBar .button-popup:not(.SearchField-Popup) button:hover,
-.UrlBar .button-popup textarea:hover {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) input:hover,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) button:hover,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup textarea:hover {
     background-color: var(--colorAccentBg) !important;
     color           : var(--colorAccentFg) !important;
 }
 
-.UrlBar .button-popup select:hover {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup select:hover {
     --modColorSelectMask: var(--colorAccentBg) !important;
     background-color    : var(--colorAccentBg) !important;
 }
 
 /* With focus */
-.UrlBar .button-popup:not(.SearchField-Popup) input:focus-within,
-.UrlBar .button-popup:not(.SearchField-Popup) button:focus-within,
-.UrlBar .button-popup textarea:focus-within {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) input:focus-within,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) button:focus-within,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup textarea:focus-within {
     background-color: var(--colorAccentBgDark) !important;
     color           : var(--colorAccentFg) !important;
     box-shadow      : 0 0 0 1px var(--colorAccentBg) !important;
 }
 
-.UrlBar .button-popup select:focus-within {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup select:focus-within {
     --modColorSelectMask: var(--colorAccentBgDark) !important;
     background-color    : var(--colorAccentBgDark) !important;
     box-shadow          : 0 0 0 1px var(--colorAccentBg) !important;
 }
 
 /* - */
-.UrlBar .button-popup input[readonly] {
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup input[readonly] {
     background  : transparent !important;
     border-color: transparent !important;
     color       : var(--colorAccentFg) !important;
 }
 
-.UrlBar .button-popup h2,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup h2,
 #main .ContentBlocker-Field {
     background-color: transparent !important;
 }

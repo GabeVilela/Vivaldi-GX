@@ -341,8 +341,11 @@ div#tabs-container {
 }
 
 #tabs-tabbar-container {
-    background-image: linear-gradient(to right, var(--colorBg) 40px, transparent 70px), linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
-    clip-path       : polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
+}
+
+#browser:not(.transparent-tabbar) #tabs-tabbar-container {
+    background-image: linear-gradient(to right, transparent 40px, var(--colorBg) var(--transitionTabBarGradient));
 }
 
 .tab-position .tab:not(.active):hover::before {
@@ -513,12 +516,15 @@ div#tabs-container {
 }
 
 #tabs-subcontainer {
-    margin-left     : 40px;
-    margin-top      : 1px;
-    border          : none !important;
-    box-shadow      : none !important;
-    z-index         : 1;
-    background-color: transparent;
+    margin-left: 40px;
+    margin-top : 1px;
+    border     : none !important;
+    box-shadow : none !important;
+    z-index    : 1;
+}
+
+#browser:not(.transparent-tabbar) #tabs-subcontainer {
+    background-color: transparent !important;
 }
 
 .tabs-top .tab-position .tab.insubstrip,
@@ -552,4 +558,18 @@ svg.svg-tab-stack {
 
 #browser.tabs-top:not(.address-top).tabs-at-edge #tabs-container {
     border-bottom: none !important;
+}
+
+#browser.tabs-top #header {
+    background-color: var(--colorBgAlphaBlur);
+}
+
+#browser:not(.transparent-tabbar) #tabs-tabbar-container::before {
+    content         : " ";
+    background-image: linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
+    width           : 100%;
+    z-index         : 0;
+    height          : 100%;
+    position        : fixed;
+    clip-path       : inset(0 0 0 var(--transitionTabBarGradient));
 }

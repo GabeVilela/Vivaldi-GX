@@ -10,17 +10,15 @@
     display: none !important;
 }
 
-.dials.speeddial .thumbnail-image.dial-folder-icon {
-    clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+.dials.speeddial div.dial.folder {
+    --modClipPath1: 12%;
+    --modClipPath2: 88%;
+    clip-path     : polygon(var(--modClipPath1) 0, 100% 0, 100% var(--modClipPath2), var(--modClipPath2) 100%, 0 100%, 0 var(--modClipPath1));
 }
 
 .dials.speeddial .dial.folder .thumbnail-image {
     border-bottom-left-radius: 4px !important;
     border-top-right-radius  : 4px !important;
-}
-
-.thumbnail-image {
-    background-color: var(--colorBgAlphaHeavy);
 }
 
 .dials .dial .button-title {
