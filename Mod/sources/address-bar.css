@@ -520,13 +520,11 @@ progress.pageload-indicator {
   transition: 0.5s;
 }
 
-#main .SearchField nav.menu,
-.toolbar-mainbar .SearchField-Popup nav.menu {
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu, .toolbar-mainbar .SearchField-Popup nav.menu {
   top: 24px !important;
 }
 
-#main .SearchField nav.menu>ul,
-.toolbar-mainbar .SearchField-Popup nav.menu>ul {
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul, .toolbar-mainbar .SearchField-Popup nav.menu>ul {
   background-color          : var(--colorAccentBgFadedMore);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
@@ -542,8 +540,7 @@ progress.pageload-indicator {
   content: none !important;
 }
 
-#main .SearchField nav.menu>ul>li,
-.toolbar-mainbar .SearchField-Popup nav.menu>ul>li {
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul>li, .toolbar-mainbar .SearchField-Popup nav.menu>ul>li {
   padding: 0px 5px !important;
 }
 
@@ -552,15 +549,13 @@ progress.pageload-indicator {
   background-color: var(--colorHighlightBgAlpha);
 }
 
-#main .SearchField nav.menu>ul>li a,
-.toolbar-mainbar .SearchField-Popup nav.menu>ul>li a {
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul>li a, .toolbar-mainbar .SearchField-Popup nav.menu>ul>li a {
   background-color: transparent !important;
   border          : none;
   height          : 36px;
 }
 
-#main .SearchField nav.menu>ul>li .menu-icon,
-.toolbar-mainbar .SearchField-Popup nav.menu>ul>li .menu-icon {
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul>li .menu-icon, .toolbar-mainbar .SearchField-Popup nav.menu>ul>li .menu-icon {
   background-color: transparent;
   height          : 28px !important;
   width           : 28px !important;
