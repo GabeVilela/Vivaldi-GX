@@ -35,13 +35,3 @@
 .address-top .toolbar-mainbar:after {
   height: unset;
 }
-.bookmark-bar.default::before {
-  background-color: var(--colorBgAlphaBlur);
-  backdrop-filter : var(--backgroundBlur);
-  content         : " ";
-  width           : 40px;
-  height: 31px;
-  position        : fixed;
-  left            : 0;
-  z-index         : 0;
-}

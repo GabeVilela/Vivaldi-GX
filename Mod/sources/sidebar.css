@@ -1,17 +1,13 @@
-#switch>button:focus:not(active) {
-    background-color: var(--colorBg) !important;
-}
-
 #panels-container.left #switch,
 #switch>button:focus:not(active) {
-    box-shadow  : none !important;
-    border-right: none !important;
+    background-color: var(--colorBg) !important;
+    box-shadow      : none !important;
+    border-right    : none !important;
 }
 
 #panels #switch {
-    margin-left    : 3px !important;
-    margin-bottom  : 40px !important;
-    backdrop-filter: none !important;
+    margin-left  : 3px !important;
+    margin-bottom: 40px !important;
 }
 
 #panels:not(.leak) #switch {
@@ -31,6 +27,10 @@
 
 #panels #switch::-webkit-scrollbar {
     width: 0px;
+}
+
+#panels {
+    background-color: var(--colorBg) !important;
 }
 
 #panels #switch>button:not(:last-of-type),
@@ -77,15 +77,6 @@
 #panels #switch .addwebpanel-wrapper,
 #panels #switch>button:last-of-type {
     margin-top: 16px;
-    display   : block;
-}
-
-#panels #switch>button:nth-child(4)>span,
-#panels #switch>button:nth-child(6)>span,
-#panels #switch>button:nth-child(9)>span,
-#panels #switch .addwebpanel-wrapper>span,
-#panels #switch>button:last-of-type>span {
-    display: inline;
 }
 
 #panels-container:not(.overlay) .panel-collapse-guard {
@@ -231,21 +222,4 @@
 
 .webpanel-header .button-toolbar button {
     border: none !important;
-}
-
-#switch .addwebpanel-wrapper>button.active,
-#switch>button.active {
-    box-shadow: none !important;
-}
-
-#panels-container {
-    box-shadow: none !important;
-}
-
-#panels-container::before {
-    content        : " ";
-    backdrop-filter: var(--backgroundBlur);
-    width          : 40px;
-    height         : 100%;
-    position       : fixed;
 }

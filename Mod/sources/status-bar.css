@@ -66,3 +66,7 @@ button.ClockPopup-Preset:hover+button.ClockPopup-Preset-Clear {
   color  : var(--colorHighlightBg) !important;
   opacity: 0.3;
 }
+
+.biscuit-setting-version {
+    color: var(--colorHighlightBg) !important;
+}

@@ -41,7 +41,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar-AddressField,
 .searchfield,
 .SearchField-Popup {
-  fill : var(--colorAccentFg) !important;
+  fill : white !important;
   color: var(--colorFgIntense);
 }
 
@@ -61,11 +61,11 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar-AddressField:hover,
 .UrlBar-SearchField:hover,
 .toolbar-mainbar .SearchField-Popup .SearchField:hover {
-  background-color: var(--colorHighlightBgAlpha) !important;
+  background-color: hsl(0deg 0% 0% / 48%) !important;
   border          : none !important;
   box-shadow      : none;
 }
-
+/*
 .UrlBar-AddressField:focus-within,
 .UrlBar-SearchField:focus-within,
 .toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
@@ -73,12 +73,12 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   border          : none !important;
   box-shadow      : none;
 }
-
+*/
 .UrlBar-AddressField .UrlBar-AddressField-siteinfo .siteinfo-ssl-issuer {
   display: none !important;
 }
 
-.toolbar.toolbar-small.toolbar-insideinput:last-of-type {
+.toolbar.toolbar-small.toolbar-insideinput {
   margin-top  : 0px;
   margin-right: 9px;
 }
@@ -92,7 +92,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .create-bookmark button svg {
-  fill          : var(--colorAccentFg) !important;
+  fill          : white !important;
   stroke        : var(--colorAccentFg);
   stroke-width  : 0.8px;
   stroke-opacity: 0.5;
@@ -122,6 +122,7 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
   max-height               : var(--modAddressbarButtonSize) !important;
   min-width                : var(--modAddressbarButtonSize) !important;
   min-height               : var(--modAddressbarButtonSize) !important;
+  zoom: 1.1;
 }
 
 .UrlBar.toolbar-mainbar .toolbar-droptarget.toolbar-mainbar>.button-toolbar.ClockButton>button:not(.button-textonly),
@@ -218,8 +219,7 @@ button.button-on .bookmark-outline {
   fill: inherit !important;
 }
 
-.toolbar-insideinput>.button-toolbar button:hover:not(.button-pressed),
-.UrlBar-AddressField>.BookmarkButton:hover {
+.toolbar-insideinput>.button-toolbar button:hover:not(.button-pressed) {
   border-radius   : 0px !important;
   background-color: hsla(0, 0%, 100%, 0.15) !important;
 }
@@ -230,9 +230,7 @@ button.button-on .bookmark-outline {
   flex  : 0 0 15px !important;
 }
 
-.toolbar.toolbar-small.toolbar-insideinput .button-toolbar>button,
-.UrlBar-AddressField>.BookmarkButton,
-.UrlBar-AddressField>.toolbar-insideinput:first-child button {
+.toolbar.toolbar-small.toolbar-insideinput .button-toolbar>button {
   border: none !important;
   height: 19px !important;
   width : 19px !important;
@@ -281,14 +279,12 @@ button.button-on .bookmark-outline {
   margin-right: 5px !important;
 }
 
-.toolbar-insideinput>div>.button-pressed,
-.UrlBar-AddressField>.BookmarkButton.BookmarkButton--Active {
+.toolbar-insideinput>div>.button-pressed {
   background-color: #6f7e85 !important;
   border          : none !important;
 }
 
-.toolbar-insideinput>div>.button-pressed:hover,
-.UrlBar-AddressField>.BookmarkButton.BookmarkButton--Active:hover {
+.toolbar-insideinput>div>.button-pressed:hover {
   background-color: #8b989e !important;
   border          : none !important;
 }
@@ -368,8 +364,8 @@ button.button-on .bookmark-outline {
 
 .OmniDropdown {
   box-shadow                : none;
-  background-color          : var(--colorAccentBgFadedMore) !important;
-  color                     : var(--colorAccentFg);
+  /* background-color          : var(--colorBg) !important; */
+  color                     : var(--colorFg);
   fill                      : var(--colorAccentFg);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
@@ -482,7 +478,7 @@ span.OmniLinkItem-Details {
   z-index : 2;
 }
 
-.UrlBar-AddressField>.toolbar-small.toolbar-insideinput:last-of-type .button-toolbar:last-child {
+.toolbar-small.toolbar-insideinput .button-toolbar:last-child {
   margin-left: 23px;
 }
 
@@ -520,11 +516,13 @@ progress.pageload-indicator {
   transition: 0.5s;
 }
 
-#main .SearchField:not(.SpeedDialView-SearchField) nav.menu, .toolbar-mainbar .SearchField-Popup nav.menu {
+#main .SearchField nav.menu,
+.toolbar-mainbar .SearchField-Popup nav.menu {
   top: 24px !important;
 }
 
-#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul, .toolbar-mainbar .SearchField-Popup nav.menu>ul {
+#main .SearchField nav.menu>ul,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul {
   background-color          : var(--colorAccentBgFadedMore);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
@@ -540,7 +538,8 @@ progress.pageload-indicator {
   content: none !important;
 }
 
-#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul>li, .toolbar-mainbar .SearchField-Popup nav.menu>ul>li {
+#main .SearchField nav.menu>ul>li,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li {
   padding: 0px 5px !important;
 }
 
@@ -549,13 +548,15 @@ progress.pageload-indicator {
   background-color: var(--colorHighlightBgAlpha);
 }
 
-#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul>li a, .toolbar-mainbar .SearchField-Popup nav.menu>ul>li a {
+#main .SearchField nav.menu>ul>li a,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li a {
   background-color: transparent !important;
   border          : none;
   height          : 36px;
 }
 
-#main .SearchField:not(.SpeedDialView-SearchField) nav.menu>ul>li .menu-icon, .toolbar-mainbar .SearchField-Popup nav.menu>ul>li .menu-icon {
+#main .SearchField nav.menu>ul>li .menu-icon,
+.toolbar-mainbar .SearchField-Popup nav.menu>ul>li .menu-icon {
   background-color: transparent;
   height          : 28px !important;
   width           : 28px !important;
@@ -582,7 +583,7 @@ progress.pageload-indicator {
 }
 
 .UrlFragment-Wrapper--ShouldHighlight {
-  --HighlightColor: var(--colorAccentFg) !important;
+  --HighlightColor: var(--colorFg) !important;
   --LowlightColor : var(--colorAccentFgFaded) !important;
 }
 
@@ -590,35 +591,45 @@ progress.pageload-indicator {
   height: 27px !important;
 }
 
-.UrlBar.toolbar.toolbar-mainbar.toolbar-large::before {
-  background-color: var(--colorBgAlphaBlur);
-  backdrop-filter : var(--backgroundBlur);
-  content         : " ";
-  width           : 40px;
-  height          : 39px;
-  position        : fixed;
-  left            : 0;
-  z-index         : 0;
+.UrlBar-AddressField, .UrlBar-AddressField form input.url, .UrlBar-SearchField, .toolbar-mainbar .SearchField-Popup .SearchField {
+  background-color: hsl(0deg 0% 0% / 68%) !important;
 }
 
-.UrlBar-AddressField>.BookmarkButton button>span.button-title {
-  display: none !important;
+.color-behind-tabs-off .tab-position .tab.active .stack-counter {
+
+  background-color: var(--colorBgDarker);
+  color: var(--colorFg);
 }
 
-.BookmarkButton-Button>button {
-  margin-right: 1px !important;
-  margin-left : 0px !important;
+.OmniDropdown-Label {
+  opacity: 0.7;
 }
 
-.UrlBar-AddressField .BookmarkButton {
-  margin-right: 4px;
+.button-toolbar button:hover {
+    border-radius: 100% !important;
+}
+.panelbtn:hover {
+  border-radius: 50% 0% 50% 50% !important;
 }
 
-.toolbar.toolbar-small.toolbar-insideinput:not(:last-of-type) {
-  margin-right: 4px;
+.button-toolbar button, .panelbtn {
+      transition: 0.7s;
 }
 
-.UrlBar-AddressField>.toolbar-insideinput .button-toolbar button,
-.UrlBar-AddressField .BookmarkButton {
-  border-radius: 0px !important;
+.UrlBar-UrlFieldWrapper .observer .UrlField input {
+  color: white !important;
+}
+
+
+#main .ContentBlocker-Blocked ul {
+  padding: 3px 0 3px 6px;
+  animation: dropfade 100ms linear;
+  max-height: 90px;
+  background-color: var(--colorAccentBg);
+  overflow: auto;
+}
+
+.UrlBar .button-popup {
+    background-color: var(--colorAccentBgDark) !important;
+    color: var(--colorAccentFg) !important;
 }
