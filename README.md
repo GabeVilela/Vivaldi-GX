@@ -7,10 +7,12 @@ A custom UI mod for Vivaldi Browser, based on Opera GX<br>
 Go in `vivaldi://experiments` and check `Allow for using CSS modifications`
 2. **Download the mod**</br>
 In this page, click on `Releases`, select a version and download its `Source code (zip)`<br>
-1. **Install**</br>
-  1. Extract the `Mod` folder to anywhere safe on your PC
-  2. Open Vivaldi Settings > Apperance and in "Interface Modifications", select that `Mod` folder
-  3. Restart Vivaldi (you can easily do this by going in `vivaldi://restart`)
+3. Extract the `Mod` folder to anywhere safe on your PC
+4. Open Vivaldi Settings > Apperance and in "Custom UI Modifications", select that `Mod` folder
+5. Restart Vivaldi (you can easily do this by going in `vivaldi://restart`)
+
+**Note: Depending on your current Vivaldi theme, you might need to change its colors for a better look.<br/>
+Check the file `list of preset themes.md` if you want some inspiration.**
 
 ## How to inspect the UI
 - Open `vivaldi://inspect/#apps`<br>
