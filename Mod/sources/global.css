@@ -1,5 +1,5 @@
 .vivaldi svg>path:nth-child(1) {
-    fill: var(--colorHighlightBg) !important;
+    fill: var(--colorAccentBg) !important;
 }
 
 .vivaldi svg>path:nth-child(2) {
@@ -110,4 +110,8 @@
 
 #browser.win .window-buttongroup button:hover:not(.window-close) {
     background-color: var(--WButtonHoverBg) !important;
+}
+
+#browser.win .window-buttongroup {
+    fill: var(--colorAccentBg);
 }

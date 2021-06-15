@@ -13,11 +13,11 @@
 }
 
 #modal-bg>div {
-    background-color: var(--colorAccentBgFadedMore);
+    background-color: var(--colorHighlightBgFadedMore);
 }
 
 .quick-command-container .quick-commands {
-    background-color: var(--colorAccentBgFadedMore);
+    background-color: var(--colorHighlightBgFadedMore);
 }
 
 .quick-commands {
@@ -31,17 +31,17 @@
 }
 
 .quick-command-search-hint {
-    background-color: var(--colorAccentBgFadedMore);
+    background-color: var(--colorHighlightBgFadedMore);
     opacity: 1 !important;
     color: var(--colorFgFadedMore);
 }
 
 span.view.quick-command-url {
-    color: var(--colorHighlightBgDark);
+    color: var(--colorAccentBgDark);
 }
 
 .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-url {
-    color  : var(--colorHighlightFg);
+    color  : var(--colorAccentFg);
     opacity: 1 !important;
 }
 
@@ -51,7 +51,7 @@ span.view.quick-command-url {
 
 .quick-command[data-selected] img+span::before {
     content         : " ";
-    background-color: var(--colorAccentBgFadedMore);
+    background-color: var(--colorHighlightBgFadedMore);
     width           : 24px;
     height          : 24px;
     border-radius   : 100%;
@@ -75,5 +75,5 @@ img.quick-command-favicon {
 }
 
 .quick-command-container .quick-commands .quick-command[data-selected] {
-    background-color: var(--colorHighlightBgAlpha) !important;
+    background-color: var(--colorAccentBgAlpha) !important;
 }

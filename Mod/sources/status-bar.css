@@ -17,8 +17,8 @@
 
 .toolbar-statusbar>div>button,
 .toolbar-statusbar .page-zoom-controls .button-toolbar svg {
-  fill : var(--colorHighlightBg);
-  color: var(--colorHighlightBg);
+  fill : var(--colorAccentBg);
+  color: var(--colorAccentBg);
 }
 
 .toolbar-statusbar input[type="range"] {
