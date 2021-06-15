@@ -1,0 +1,22 @@
+#tabs-container .tab.isdiscarded .favicon:before {
+  content         : "zZz";
+  font-size       : 10px;
+  position        : absolute;
+  top             : 8px;
+  left            : -1px;
+  z-index         : 1;
+  background-image: linear-gradient(0deg, hsla(263, 62%, 4%, 0.75), hsla(263, 62%, 4%, 0.75));
+  width           : 18px;
+  padding-left    : 3px;
+  color           : #ffffff;
+}
+
+#tabs-container .tab.tab-group.isdiscarded .favicon:before {
+  font-size: 9px;
+  top      : 10px;
+}
+
+#tabs-container .tab.isdiscarded .favicon,
+#tabs-container .tab.isdiscarded:hover .favicon {
+  filter: none !important
+}

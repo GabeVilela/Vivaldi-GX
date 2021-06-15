@@ -1,0 +1,32 @@
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"]:not(.primary),
+#modal-bg input[type="submit"] {
+    background-color: var(--colorHighlightBg) !important;
+    background-image: none !important;
+    border          : 1px solid var(--colorHighlightBgDark) !important;
+    color           : var(--colorHighlightFg) !important;
+    border-radius   : 3px !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"]:not(.primary):hover,
+#modal-bg input[type="submit"]:hover {
+    background-image: linear-gradient(0deg, rgb(0 0 0 / 0.15), hsl(0 0% 0% / 0.15)) !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"].primary,
+#modal-bg input[type="button"] {
+    background-color: var(--colorAccentBgDark) !important;
+    background-image: none !important;
+    border          : 1px solid var(--colorAccentBgFadedMost) !important;
+    color           : var(--colorAccentFg) !important;
+    border-radius   : 3px !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"].primary:hover,
+#modal-bg input[type="button"]:hover {
+    background-color: var(--colorAccentBg) !important;
+}
+
+.button-popup-wrapper .UrlBar-AddressField-popup-content section,
+#modal-bg .dialog-footer {
+    text-align: right;
+}

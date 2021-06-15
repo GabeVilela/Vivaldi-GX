@@ -1,0 +1,251 @@
+#switch>button:focus:not(active) {
+    background-color: var(--colorBg) !important;
+}
+
+#panels-container.left #switch,
+#switch>button:focus:not(active) {
+    box-shadow  : none !important;
+    border-right: none !important;
+}
+
+#panels #switch {
+    margin-left    : 3px !important;
+    margin-bottom  : 40px !important;
+    backdrop-filter: none !important;
+}
+
+#panels:not(.leak) #switch {
+    overflow-y: auto;
+    max-width : 100%;
+    overflow-x: hidden;
+}
+
+#panels.leak #switch>div.addwebpanel-wrapper {
+    top     : calc(50vh - 200px);
+    position: absolute;
+}
+
+#panels.leak #switch>div.addwebpanel-wrapper>button {
+    display: none;
+}
+
+#panels #switch::-webkit-scrollbar {
+    width: 0px;
+}
+
+#panels #switch>button:not(:last-of-type),
+#panels #switch>div {
+    margin-bottom: 12px;
+}
+
+#panels-container:not(.overlay):not([style*="width: 0px;"]) {
+    min-width   : 40px !important;
+    border-right: none !important;
+}
+
+#browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
+    min-width: 0px !important;
+}
+
+#panels-container:not(.overlay) .panel-group {
+    margin-left  : 3px !important;
+    border-top   : 1px solid var(--colorAccentBg) !important;
+    border-bottom: none !important;
+}
+
+#panels-container.overlay .panel-group {
+    left: 40px !important;
+}
+
+#panels #switch>button:nth-child(4)::before,
+#panels #switch>button:nth-child(6)::before,
+#panels #switch>button:nth-child(9)::before,
+#panels:not(.leak) #switch .addwebpanel-wrapper::before,
+#panels #switch>button:last-of-type::before {
+    content         : " ";
+    width           : 12px;
+    margin-top      : -16px;
+    height          : 1px;
+    background-color: var(--colorAccentBg);
+    float           : left;
+    margin-left     : 11px;
+}
+
+#panels #switch>button:nth-child(4),
+#panels #switch>button:nth-child(6),
+#panels #switch>button:nth-child(9),
+#panels #switch .addwebpanel-wrapper,
+#panels #switch>button:last-of-type {
+    margin-top: 16px;
+    display   : block;
+}
+
+#panels #switch>button:nth-child(4)>span,
+#panels #switch>button:nth-child(6)>span,
+#panels #switch>button:nth-child(9)>span,
+#panels #switch .addwebpanel-wrapper>span,
+#panels #switch>button:last-of-type>span {
+    display: inline;
+}
+
+#panels-container:not(.overlay) .panel-collapse-guard {
+    min-width: 150px !important;
+}
+
+#panels-container.overlay {
+    border-right: none !important;
+    width       : 40px !important;
+}
+
+#browser.tabs-off.address-top #panels-container.overlay {
+    border-top: 1px solid var(--colorAccentBg);
+}
+
+#panels-container:after {
+    background-color: transparent;
+}
+
+#panels-container:not([style*="width: 0px;"])+#webview-container {
+    border-left: 1px solid var(--colorBg) !important;
+}
+
+#panels-container:not([style*="width: 0px;"])+#webview-container:before {
+    content         : ' ';
+    position        : absolute;
+    height          : 100%;
+    width           : 1px;
+    left            : -1px;
+    top             : 0;
+    background-image: linear-gradient(to bottom, var(--colorAccentBg), transparent 100%);
+    z-index         : 1;
+}
+
+#browser.tabs-top.address-top #panels-container[style*="width: 0px;"]+#webview-container {
+    border-top: 1px solid var(--colorAccentBg);
+}
+
+#browser.tabs-top.address-top #panels-container[style*="width: 0px;"]+#webview-container:before {
+    content         : ' ';
+    position        : absolute;
+    height          : 1px;
+    width           : 41px;
+    left            : 0px;
+    top             : -1px;
+    background-color: var(--colorAccentBg);
+    z-index         : 1;
+}
+
+#switch>button {
+    border       : none !important;
+    border-radius: 0px !important;
+}
+
+#switch button:hover,
+#switch button.addwebpanel-wrapper:hover {
+    background-color: transparent !important;
+}
+
+#switch button img {
+    width : 16px !important;
+    height: 16px !important;
+}
+
+#switch>button:hover svg,
+#switch>button img:hover,
+.addwebpanel-wrapper .addwebpanel:hover svg,
+#switch>button.downloads.in-progress:hover div.progress {
+    transform : scale(1.18);
+    transition: 0.15s ease-out !important;
+}
+
+#switch>button svg,
+#switch>button img,
+.addwebpanel-wrapper .addwebpanel svg {
+    transition: 0.15s ease-in !important;
+}
+
+#switch>button.active {
+    background-color: transparent !important;
+    border          : none !important;
+}
+
+#switch .addwebpanel-wrapper>button,
+#switch>button {
+    fill: var(--colorAccentBg) !important;
+}
+
+.theme-dark #switch button.webviewbtn img {
+    background-color: transparent !important;
+    border-radius   : 0px !important;
+}
+
+#switch>button:hover:not(.active),
+.left #switch .addwebpanel-wrapper>button:hover:not(.active) {
+    box-shadow: none !important;
+}
+
+#switch .addwebpanel-wrapper>button svg,
+#switch>button svg {
+    padding-top: 0px !important;
+}
+
+#switch button.webviewbtn img {
+    padding: 0px !important;
+}
+
+#switch>button.downloads.in-progress div.progress div.loaded {
+    background-color: var(--colorAccentBg) !important;
+    height          : 2px;
+    max-width       : 16px;
+    position        : absolute;
+    top             : 2px;
+    border-radius   : 0px !important;
+}
+
+#switch>button.downloads.in-progress div.progress {
+    background-color: var(--colorBg) !important;
+    width           : 18px !important;
+    top             : 22px !important;
+    left            : 9px !important;
+    height          : 6px;
+    border-left     : 1px solid var(--colorAccentBg) !important;
+    border-right    : 1px solid var(--colorAccentBg) !important;
+    border-top      : none !important;
+    border-bottom   : none !important;
+    border-radius   : 0px !important;
+}
+
+#panels #switch .button-badge {
+    margin-left  : 0px !important;
+    margin-right : 3px !important;
+    margin-top   : 5px !important;
+    margin-bottom: 0px !important;
+}
+
+.webpanel-header {
+    background-color   : var(--colorAccentBg);
+    color              : var(--colorAccentFg);
+    fill               : var(--colorAccentFg);
+    border-bottom-color: #394551 !important;
+}
+
+.webpanel-header .button-toolbar button {
+    border: none !important;
+}
+
+#switch .addwebpanel-wrapper>button.active,
+#switch>button.active {
+    box-shadow: none !important;
+}
+
+#panels-container {
+    box-shadow: none !important;
+}
+
+#panels-container::before {
+    content        : " ";
+    backdrop-filter: var(--backgroundBlur);
+    width          : 40px;
+    height         : 100%;
+    position       : fixed;
+}

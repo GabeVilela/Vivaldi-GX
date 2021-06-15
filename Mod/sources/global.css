@@ -1,0 +1,117 @@
+.vivaldi svg>path:nth-child(1) {
+    fill: var(--colorAccentBg) !important;
+}
+
+.vivaldi svg>path:nth-child(2) {
+    fill: var(--colorBg) !important;
+}
+
+#titlebar button.vivaldi {
+    margin-left: 3px;
+    margin-top : 3px;
+}
+
+.vivaldi span.burger-icon {
+    opacity: 1 !important;
+}
+
+.vivaldi:hover {
+    background-color: var(--WButtonHoverBg) !important;
+}
+
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup {
+    background-color: var(--colorAccentBgDark);
+    color           : var(--colorAccentFg);
+}
+
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup footer {
+    background: var(--colorAccentBgDarker) !important;
+}
+
+/* - */
+/* Normal */
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) input,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) button,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup textarea {
+    background-color: var(--colorAccentBgDarker) !important;
+    background-image: none !important;
+    border-color    : var(--colorAccentBg) !important;
+    color           : var(--colorAccentFgFaded) !important;
+}
+
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup select {
+    --modColorSelectMask: var(--colorAccentBgDarker);
+    background-color    : var(--colorAccentBgDarker) !important;
+    border-color        : var(--colorAccentBg) !important;
+    color               : transparent !important;
+    background-image    : linear-gradient(55deg, var(--modColorSelectMask) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--modColorSelectMask) 55%), linear-gradient(180deg, var(--modColorSelectMask) 30%, var(--colorAccentFg) 30%) !important;
+}
+
+/* Hover */
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) input:hover,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) button:hover,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup textarea:hover {
+    background-color: var(--colorAccentBg) !important;
+    color           : var(--colorAccentFg) !important;
+}
+
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup select:hover {
+    --modColorSelectMask: var(--colorAccentBg) !important;
+    background-color    : var(--colorAccentBg) !important;
+}
+
+/* With focus */
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) input:focus-within,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup:not(.SearchField-Popup) button:focus-within,
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup textarea:focus-within {
+    background-color: var(--colorAccentBgDark) !important;
+    color           : var(--colorAccentFg) !important;
+    box-shadow      : 0 0 0 1px var(--colorAccentBg) !important;
+}
+
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup select:focus-within {
+    --modColorSelectMask: var(--colorAccentBgDark) !important;
+    background-color    : var(--colorAccentBgDark) !important;
+    box-shadow          : 0 0 0 1px var(--colorAccentBg) !important;
+}
+
+/* - */
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup input[readonly] {
+    background  : transparent !important;
+    border-color: transparent !important;
+    color       : var(--colorAccentFg) !important;
+}
+
+.UrlBar>div:not(.UrlBar-AddressField) .button-popup h2,
+#main .ContentBlocker-Field {
+    background-color: transparent !important;
+}
+
+.addbookmark-cardwrapper {
+    background-color: transparent !important;
+}
+
+.tab-position .tab .tab-header .button-badge,
+#panels #switch .button-badge {
+    border          : none !important;
+    border-radius   : 100px !important;
+    font-size       : 0px !important;
+    padding         : 0px !important;
+    height          : 5px !important;
+    min-width       : 5px !important;
+    background-color: var(--colorHighlightBg) !important;
+    z-index         : 1;
+    box-shadow      : 0 0 0 4px var(--colorBg);
+}
+
+#browser.win .window-buttongroup {
+    fill: var(--colorHighlightBg);
+}
+
+#browser.win .window-buttongroup button:hover:not(.window-close) {
+    background-color: var(--WButtonHoverBg) !important;
+}
+
+#browser.win .window-buttongroup {
+    fill: var(--colorAccentBg);
+}

@@ -1,0 +1,79 @@
+#modal-bg,
+#modal-bg>div,
+.quick-command-container .quick-commands {
+    border-bottom-left-radius : 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#modal-bg,
+#modal-bg>div,
+.quick-command-container .qc-entry {
+    border-top-left-radius : 12px;
+    border-top-right-radius: 12px;
+}
+
+#modal-bg>div {
+    background-color: var(--colorHighlightBgFadedMore);
+}
+
+.quick-command-container .quick-commands {
+    background-color: var(--colorHighlightBgFadedMore);
+}
+
+.quick-commands {
+    --modQCHeight: calc(280px + 8px);
+    height       : var(--modQCHeight) !important;
+    max-height   : var(--modQCHeight) !important;
+}
+
+.qc-entry>input {
+    border-bottom: none !important;
+}
+
+.quick-command-search-hint {
+    background-color: var(--colorHighlightBgFadedMore);
+    opacity: 1 !important;
+    color: var(--colorFgFadedMore);
+}
+
+span.view.quick-command-url {
+    color: var(--colorAccentBgDark);
+}
+
+.quick-command-container .quick-commands .quick-command[data-selected] .quick-command-url {
+    color  : var(--colorAccentFg);
+    opacity: 1 !important;
+}
+
+.isblurred .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-url {
+    color: var(--colorFg);
+}
+
+.quick-command[data-selected] img+span::before {
+    content         : " ";
+    background-color: var(--colorHighlightBgFadedMore);
+    width           : 24px;
+    height          : 24px;
+    border-radius   : 100%;
+    left            : 7.5px;
+    position        : absolute;
+    z-index         : 0;
+    top             : 2px;
+}
+
+img.quick-command-favicon {
+    z-index: 1;
+}
+
+.quick-command-container,
+.quick-commands>div {
+    width: 50vw !important;
+}
+
+.quick-commands>div>div {
+    max-width: 50vw !important;
+}
+
+.quick-command-container .quick-commands .quick-command[data-selected] {
+    background-color: var(--colorAccentBgAlpha) !important;
+}

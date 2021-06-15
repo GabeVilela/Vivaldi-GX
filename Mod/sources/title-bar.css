@@ -1,0 +1,3 @@
+#browser:not(.address-top)>#header {
+    box-shadow: none !important;
+}

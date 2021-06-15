@@ -1,0 +1,37 @@
+.dials.speeddial .thumbnail-image {
+    box-shadow: none !important;
+}
+
+.thumbnail-image svg .folder-tab-color {
+    fill: transparent !important;
+}
+
+.thumbnail-image .folderoutline {
+    display: none !important;
+}
+
+.dials.speeddial div.dial.folder:not(:focus) {
+    --modClipPath1: 12%;
+    --modClipPath2: 88%;
+    clip-path     : polygon(var(--modClipPath1) 0, 100% 0, 100% var(--modClipPath2), var(--modClipPath2) 100%, 0 100%, 0 var(--modClipPath1));
+}
+
+.dials.speeddial .dial.folder .thumbnail-image {
+    border-bottom-left-radius: 4px !important;
+    border-top-right-radius  : 4px !important;
+}
+
+.dials .dial .button-title {
+    background-color: transparent !important;
+    color           : var(--colorFgIntense);
+    box-shadow      : none !important;
+    filter          : drop-shadow(0px 0px 3px black) drop-shadow(0px 0px 0px black) drop-shadow(0px 0px 0px black);
+}
+
+.dials .dial:focus-within .editable-title-container .button-title {
+    color: var(--colorFgIntense) !important;
+}
+
+.dials .dial.folder:focus {
+    background-image: linear-gradient(-45deg, var(--colorHighlightBg) 7%, transparent 8%, transparent 92%, var(--colorHighlightBg) 93%);
+}
