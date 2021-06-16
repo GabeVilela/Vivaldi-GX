@@ -344,10 +344,6 @@ div#tabs-container {
     clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
 }
 
-#browser:not(.transparent-tabbar) #tabs-tabbar-container {
-    background-image: linear-gradient(to right, transparent 40px, var(--colorBg) var(--transitionTabBarGradient));
-}
-
 .tab-position .tab:not(.active):hover::before {
     background-color: transparent;
 }
@@ -560,16 +556,48 @@ svg.svg-tab-stack {
     border-bottom: none !important;
 }
 
-#browser.tabs-top #header {
-    background-color: var(--colorBgAlphaBlur);
+#browser.tabs-top:not(.transparent-tabbar) #header {
+    background-color: transparent !important;
+    background-image: linear-gradient(to top, var(--colorBgAlphaBlur), var(--colorBg));
+}
+
+#browser.tabs-top.transparent-tabbar #header {
+    background-color: var(--colorBgAlphaBlur) !important;
 }
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container::before {
     content         : " ";
-    background-image: linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
+    background-image: linear-gradient(to right, transparent 40px, var(--colorBg) var(--transitionTabBarGradient), transparent var(--transitionTabBarGradientB));
     width           : 100%;
     z-index         : 0;
     height          : 100%;
     position        : fixed;
+    top             : 0;
+}
+
+#browser:not(.transparent-tabbar) #tabs-tabbar-container::after {
+    content         : " ";
+    background-image: linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
+    width           : 100%;
+    z-index         : -1;
+    height          : 100%;
+    position        : fixed;
     clip-path       : inset(0 0 0 var(--transitionTabBarGradient));
+    top             : 0;
+}
+
+#browser:not(.transparent-tabbar).maximized:not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 30px;"]::before {
+    height: 37px;
+}
+
+#browser:not(.transparent-tabbar).maximized:not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 61px;"]::before {
+    height: 68px;
+}
+
+#browser:not(.transparent-tabbar):not(.maximized):not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 30px;"]::before {
+    height: 39px;
+}
+
+#browser:not(.transparent-tabbar):not(.maximized):not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 61px;"]::before {
+    height: 70px;
 }
