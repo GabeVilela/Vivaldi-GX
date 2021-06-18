@@ -67,11 +67,11 @@ img.quick-command-favicon {
 
 .quick-command-container,
 .quick-commands>div {
-    width: 50vw !important;
+    width: 70em !important;
 }
 
 .quick-commands>div>div {
-    max-width: 50vw !important;
+    max-width: 70em !important;
 }
 
 .quick-command-container .quick-commands .quick-command[data-selected] {

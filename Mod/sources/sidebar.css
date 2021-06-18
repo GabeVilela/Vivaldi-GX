@@ -60,24 +60,28 @@
 #panels #switch>button:nth-child(4)::before,
 #panels #switch>button:nth-child(6)::before,
 #panels #switch>button:nth-child(9)::before,
-#panels:not(.leak) #switch .addwebpanel-wrapper::before,
-#panels #switch>button:last-of-type::before {
+#panels:not(.leak) #switch .addwebpanel-wrapper::before
+ {
     content         : " ";
     width           : 12px;
-    margin-top      : -16px;
+    margin-top      : -48px;
     height          : 1px;
     background-color: var(--colorHighlightBg);
-    float           : left;
-    margin-left     : 11px;
+    float: left;
+    display: block;
+    /* margin-left     : 11px; */
+    transform: translateX(10px);
+    /* margin-left: 10px !important; */
 }
 
 #panels #switch>button:nth-child(4),
 #panels #switch>button:nth-child(6),
 #panels #switch>button:nth-child(9),
-#panels #switch .addwebpanel-wrapper,
 #panels #switch>button:last-of-type {
     margin-top: 16px;
-    display   : block;
+    /* transform: translateX(-10px); */
+    /* margin-left: -10px; */
+    padding-right: 10px;
 }
 
 #panels #switch>button:nth-child(4)>span,
