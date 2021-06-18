@@ -44,7 +44,7 @@
 }
 
 #tabs-container .tab:not(.tab-group) {
-    clip-path: polygon(7px 0%, 100% 0, 100% 100%, 0 100%, 0% 7px);
+    clip-path: polygon(6.5px 0%, 100% 0, 100% 100%, 0 100%, 0% 6.5px);
 }
 
 #tabs-container[style*="flex-grow: 0;"] .tab.active {
