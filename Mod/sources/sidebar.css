@@ -244,7 +244,6 @@
 
 #panels-container::before {
     content        : " ";
-    backdrop-filter: var(--backgroundBlur);
     width          : 40px;
     height         : 100%;
     position       : fixed;
