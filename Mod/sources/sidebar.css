@@ -249,3 +249,7 @@
     height         : 100%;
     position       : fixed;
 }
+
+#panels-container.left.switcher::before{
+    display : none;
+}
