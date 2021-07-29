@@ -43,7 +43,7 @@
     opacity         : 1 !important;
 }
 
-#tabs-container .tab:not(.tab-group) {
+#tabs-container .tab:not(.tab-group):not(.tab-in-accordion) {
     clip-path: polygon(6.5px 0%, 100% 0, 100% 100%, 0 100%, 0% 6.5px);
 }
 
@@ -54,7 +54,7 @@
 }
 
 
-#tabs-container .tab:not(.tab-group).active {
+#tabs-container .tab:not(.tab-group):not(.tab-in-accordion).active {
     background-image: linear-gradient(135deg, var(--colorHighlightBg) 4.5px, transparent 0px);
 }
 
@@ -246,7 +246,7 @@
     border-right-color: transparent !important;
 }
 
-.tab-group {
+.tab-group,.tab-in-accordion {
     border-radius: 0px !important;
 }
 
@@ -274,7 +274,7 @@
 
 
 
-#tabs-container .tab:not(.tab-group) {
+#tabs-container .tab:not(.tab-group):not(.tab-in-accordion) {
     border-radius          : 0px !important;
     border-top-right-radius: 2px !important;
 }
@@ -302,6 +302,22 @@
 .tab-group .tab-header>.close {
     transform : scale(0.78) !important;
     margin-top: 2px;
+}
+
+.tab-in-accordion .svg-tab-stack {
+    top: 0px;
+    left: 0px;
+    border-radius: 0px;
+}
+.tab-in-accordion .svg-tab-stack > .stack-frame{
+    stroke: var(--colorHighlightBg);
+    stroke-width: 2px;
+    rx: 0px;
+    ry: 0px;
+}
+
+.accordion-toggle-arrow .VivaldiSvgIcon.left {
+    fill: var(--colorHighlightBg);
 }
 
 .tab-position .tab .tab-header .button-badge {
@@ -528,7 +544,7 @@ div#tabs-container {
     margin: 0px 1px 0px 0px !important;
 }
 
-svg.svg-tab-stack {
+#browser:not(.accordion-tabs-on) svg.svg-tab-stack{
     display: none !important;
 }
 
