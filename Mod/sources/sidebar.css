@@ -242,7 +242,7 @@
     box-shadow: none !important;
 }
 
-#panels-container::before {
+#panels-container:not([style*="width: 0px;"])::before {
     content        : " ";
     backdrop-filter: var(--backgroundBlur);
     width          : 40px;

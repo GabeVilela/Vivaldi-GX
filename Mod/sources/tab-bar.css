@@ -49,7 +49,7 @@
 }
 
 #tabs-container .tab:not(.tab-group) {
-    clip-path: polygon(7px 0%, 100% 0, 100% 100%, 0 100%, 0% 7px);
+    clip-path: polygon(6.5px 0%, 100% 0, 100% 100%, 0 100%, 0% 6.5px);
 }
 
 #tabs-container[style*="flex-grow: 0;"] .tab.active {
@@ -344,10 +344,6 @@ div#tabs-container {
     clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
 }
 
-#browser:not(.transparent-tabbar) #tabs-tabbar-container {
-    background-image: linear-gradient(to right, transparent 40px, var(--colorBg) var(--transitionTabBarGradient));
-}
-
 .tab-position .tab:not(.active):hover::before {
     background-color: transparent;
 }
@@ -560,21 +556,31 @@ svg.svg-tab-stack {
     border-bottom: none !important;
 }
 
-#browser.tabs-top #header {
-    background-color: var(--colorBgAlphaBlur);
+#browser.tabs-top:not(.transparent-tabbar) #header {
+    background-color: transparent !important;
+    background-image: linear-gradient(to top, var(--colorBgAlphaBlur), var(--colorBg));
+}
+
+#browser.tabs-top.transparent-tabbar #header {
+    background-color: var(--colorBgAlphaBlur) !important;
 }
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container::before {
     content         : " ";
-    background-image: linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
+    background-image: linear-gradient(to right, transparent 40px, var(--colorBg) var(--transitionTabBarGradient), transparent var(--transitionTabBarGradientB));
     width           : 100%;
     z-index         : 0;
     height          : 100%;
     position        : fixed;
-    clip-path       : inset(0 0 0 var(--transitionTabBarGradient));
+    top             : 0;
 }
 
-.tab-position .tab:not(.active) {
-    color: #8c8c8c;
-    fill: var(--GXcolorHighlightFgFaded) !important;
+#browser:not(.transparent-tabbar) #tabs-tabbar-container::after {
+    content         : " ";
+    background-image: linear-gradient(0deg, var(--colorBgDark) 0%, var(--colorBg) 48%, var(--colorBgDark) 100%);
+    width           : 100%;
+    z-index         : -1;
+    height          : 100%;
+    position        : fixed;
+    clip-path       : inset(0 0 0 var(--transitionTabBarGradient));
 }
