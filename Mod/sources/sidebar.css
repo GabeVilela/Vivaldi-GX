@@ -49,7 +49,7 @@
 
 #panels-container:not(.overlay) .panel-group {
     margin-left  : 3px !important;
-    border-top   : 1px solid var(--colorHighlightBg) !important;
+    border-top   : 1px solid var(--colorAccentBg) !important;
     border-bottom: none !important;
 }
 
@@ -66,7 +66,7 @@
     width           : 12px;
     margin-top      : -16px;
     height          : 1px;
-    background-color: var(--colorHighlightBg);
+    background-color: var(--colorAccentBg);
     float           : left;
     margin-left     : 11px;
 }
@@ -98,7 +98,7 @@
 }
 
 #browser.tabs-off.address-top #panels-container.overlay {
-    border-top: 1px solid var(--colorHighlightBg);
+    border-top: 1px solid var(--colorAccentBg);
 }
 
 #panels-container:after {
@@ -116,7 +116,7 @@
     width           : 1px;
     left            : -1px;
     top             : 0;
-    background-image: linear-gradient(to bottom, var(--colorHighlightBg), transparent 100%);
+    background-image: linear-gradient(to bottom, var(--colorAccentBg), transparent 100%);
     z-index         : 1;
 }
 
@@ -131,7 +131,7 @@
     width           : 41px;
     left            : 0px;
     top             : -1px;
-    background-color: var(--colorHighlightBg);
+    background-color: var(--colorAccentBg);
     z-index         : 1;
 }
 
@@ -171,7 +171,7 @@
 
 #switch .addwebpanel-wrapper>button,
 #switch>button {
-    fill: var(--colorHighlightBg) !important;
+    fill: var(--colorAccentBg) !important;
 }
 
 .theme-dark #switch button.webviewbtn img {
@@ -194,7 +194,7 @@
 }
 
 #switch>button.downloads.in-progress div.progress div.loaded {
-    background-color: var(--colorHighlightBg) !important;
+    background-color: var(--colorAccentBg) !important;
     height          : 2px;
     max-width       : 16px;
     position        : absolute;
@@ -208,8 +208,8 @@
     top             : 22px !important;
     left            : 9px !important;
     height          : 6px;
-    border-left     : 1px solid var(--colorHighlightBg) !important;
-    border-right    : 1px solid var(--colorHighlightBg) !important;
+    border-left     : 1px solid var(--colorAccentBg) !important;
+    border-right    : 1px solid var(--colorAccentBg) !important;
     border-top      : none !important;
     border-bottom   : none !important;
     border-radius   : 0px !important;

@@ -2,12 +2,12 @@
     border-width       : 1px 0px 0px 0px;
     border-style       : solid;
     border-top-color   : transparent;
-    border-bottom-color: var(--colorHighlightBg);
+    border-bottom-color: var(--colorAccentBg);
 }
 
 #tabs-container .tab.active {
     border-width       : 1px 1px 0 1px;
-    border-color       : var(--colorHighlightBg);
+    border-color       : var(--colorAccentBg);
     border-bottom-color: transparent;
 }
 
@@ -19,7 +19,7 @@
 #tabs-subcontainer .tab.active {
     border-width: 1px 1px 0px 1px;
     border-style: solid;
-    border-color: var(--colorHighlightBg);
+    border-color: var(--colorAccentBg);
 }
 
 #tabs-subcontainer .tab.active .tab-header>.close {
@@ -31,7 +31,7 @@
 }
 
 .tab:not(.active):hover {
-    background-color: var(--colorHighlightBgAlpha) !important;
+    background-color: var(--colorAccentBgAlpha) !important;
 }
 
 .tab .close {
@@ -41,6 +41,11 @@
     width           : 17px !important;
     height          : 17px !important;
     opacity         : 1 !important;
+}
+
+.tab-position .tab .stack-counter {
+    clip-path        : polygon(20% 0%, 100% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 100%, 0% 20%);
+    border-radius    : 0px !important;
 }
 
 #tabs-container .tab:not(.tab-group) {
@@ -55,11 +60,11 @@
 
 
 #tabs-container .tab:not(.tab-group).active {
-    background-image: linear-gradient(135deg, var(--colorHighlightBg) 4.5px, transparent 0px);
+    background-image: linear-gradient(135deg, var(--colorAccentBg) 4.5px, transparent 0px);
 }
 
 #tabs-container[style*="flex-grow: 0;"] .tab:not(.tab-group).active {
-    background-color: var(--colorHighlightBg) !important;
+    background-color: var(--colorAccentBg) !important;
     color           : var(--colorHighlightFg);
     fill            : var(--colorHighlightFg);
 }
@@ -70,7 +75,7 @@
 #tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:after {
     --modLineWidth  : 25vw;
     content         : " ";
-    background-image: linear-gradient(to right, var(--colorHighlightBg), transparent);
+    background-image: linear-gradient(to right, var(--colorAccentBg), transparent);
     width           : var(--modLineWidth);
     height          : 1px;
     position        : absolute;
@@ -105,7 +110,7 @@
 #tabs-subcontainer .tab-position[style*="--ZIndex:2;"]:before,
 #tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:before {
     content         : " ";
-    background-color: var(--colorHighlightBg);
+    background-color: var(--colorAccentBg);
     width           : 100vw;
     height          : 1px;
     position        : absolute;
@@ -160,7 +165,7 @@
 }
 
 .tab-position .tab.unread .close:not(:hover) {
-    background-color: var(--colorHighlightBg) !important;
+    background-color: var(--colorAccentBg) !important;
     border-radius   : 100%;
     transform       : scale(0.5);
 }
@@ -187,12 +192,12 @@
 
 .tab.marked .svg-tab-selection>.inner {
     stroke: transparent !important;
-    fill  : var(--colorHighlightBgAlpha) !important;
+    fill  : var(--colorAccentBgAlpha) !important;
 }
 
 #tabs-container[style*="flex-grow: 0;"] .tab.active.marked {
     background-color: transparent !important;
-    border          : 2px solid var(--colorHighlightBg) !important;
+    border          : 2px solid var(--colorAccentBg) !important;
 }
 
 .tab.marked:not(.active) .tab-indicator.marked.active.tab-indicator.marked:after {
@@ -213,7 +218,7 @@
     background-color: transparent !important;
     height          : 8px !important;
     border-top      : none !important;
-    border-bottom   : 1px solid var(--colorHighlightBg) !important;
+    border-bottom   : 1px solid var(--colorAccentBg) !important;
 }
 
 .tab-group.active+.tab-group-indicator {
@@ -221,27 +226,27 @@
 }
 
 .tab-group+.tab-group-indicator .tab-indicator+.tab-indicator {
-    border-left: 1px solid var(--colorHighlightBg) !important;
+    border-left: 1px solid var(--colorAccentBg) !important;
 }
 
 .tab-group:not(.active)+.tab-group-indicator .tab-indicator:first-of-type {
-    border-left: 1px solid var(--colorHighlightBg);
+    border-left: 1px solid var(--colorAccentBg);
 }
 
 .tab-group:not(.active)+.tab-group-indicator .tab-indicator:last-of-type {
-    border-right: 1px solid var(--colorHighlightBg);
+    border-right: 1px solid var(--colorAccentBg);
 }
 
 .tab-group:not(.active)+.tab-group-indicator .tab-indicator.active:not(.marked):hover {
-    background-color: var(--colorHighlightBgAlpha) !important;
+    background-color: var(--colorAccentBgAlpha) !important;
 }
 
 .tab-group+.tab-group-indicator .tab-indicator:not(.active):not(.marked):hover {
-    background-color: var(--colorHighlightBgAlpha) !important;
+    background-color: var(--colorAccentBgAlpha) !important;
 }
 
 .tab-group-indicator .tab-indicator.marked {
-    background-color  : var(--colorHighlightBg) !important;
+    background-color  : var(--colorAccentBg) !important;
     border-left-color : transparent !important;
     border-right-color: transparent !important;
 }
@@ -258,7 +263,7 @@
 .tab-group.active+.tab-group-indicator {
     border-width : 1px 1px 0 1px;
     border-style : solid;
-    border-color : var(--colorHighlightBg);
+    border-color : var(--colorAccentBg);
     padding-left : 0px !important;
     padding-right: 0px !important;
     margin-right : 1px;
@@ -314,7 +319,7 @@
 }
 
 .tab-position .tab:not(.active) .progress-indicator {
-    background-color: var(--colorHighlightBgAlpha);
+    background-color: var(--colorAccentBgAlpha);
     height          : 2px;
 }
 
@@ -328,11 +333,6 @@
 
 .theme-dark .tab-position .tab .tab-header .favicon img[srcset^="ht"] {
     filter: drop-shadow(0px 0px 1px var(--colorAccentBg)) !important;
-}
-
-.tab-position .tab:not(.active) {
-    color: var(--GXcolorAccentFgFaded) !important;
-    fill : var(--GXcolorAccentFgFaded) !important;
 }
 
 div#tabs-container {
@@ -367,7 +367,7 @@ div#tabs-container {
 #vivaldi-tooltip .tab-group .tooltip-item:hover,
 #vivaldi-tooltip .tab-group .tooltip-item:hover .thumbnail-image,
 #vivaldi-tooltip .tab-group .tooltip-item:hover .thumbnail-caption {
-    background-color: var(--colorHighlightBgDark) !important;
+    background-color: var(--colorAccentBgDark) !important;
     color           : var(--colorHighlightFg) !important;
     fill            : var(--colorHighlightFg) !important;
 }
@@ -402,7 +402,7 @@ div#tabs-container {
     height: 11px !important;
     width : 11px !important;
     flex  : none !important;
-    fill  : var(--colorHighlightBg);
+    fill  : var(--colorAccentBg);
 }
 
 #tabs-container[style*="flex-grow: 0;"] .newtab button svg {
@@ -418,7 +418,7 @@ div#tabs-container {
 }
 
 .newtab>button:hover {
-    background-color: var(--colorHighlightBgAlpha) !important;
+    background-color: var(--colorAccentBgAlpha) !important;
     border          : none !important;
 }
 
@@ -437,7 +437,7 @@ div#tabs-container {
 }
 
 .toolbar-tabbar.sync-and-trash-container button svg {
-    fill: var(--colorHighlightBg);
+    fill: var(--colorAccentBg);
 }
 
 .toolbar-tabbar.sync-and-trash-container button {
@@ -534,7 +534,7 @@ svg.svg-tab-stack {
 
 .stack-counter {
     align-self      : center;
-    background-color: var(--colorHighlightBg) !important;
+    background-color: var(--colorAccentBg) !important;
     color           : var(--colorHighlightFg) !important;
 }
 
@@ -544,7 +544,7 @@ svg.svg-tab-stack {
 }
 
 .subcontainer-lock button {
-    fill: var(--colorHighlightBg);
+    fill: var(--colorAccentBg);
 }
 
 #browser.tabs-top:not(.address-top).tabs-at-edge #header {
@@ -583,21 +583,4 @@ svg.svg-tab-stack {
     height          : 100%;
     position        : fixed;
     clip-path       : inset(0 0 0 var(--transitionTabBarGradient));
-    top             : 0;
-}
-
-#browser:not(.transparent-tabbar).maximized:not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 30px;"]::before {
-    height: 37px;
-}
-
-#browser:not(.transparent-tabbar).maximized:not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 61px;"]::before {
-    height: 68px;
-}
-
-#browser:not(.transparent-tabbar):not(.maximized):not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 30px;"]::before {
-    height: 39px;
-}
-
-#browser:not(.transparent-tabbar):not(.maximized):not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 61px;"]::before {
-    height: 70px;
 }

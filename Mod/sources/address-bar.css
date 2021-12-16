@@ -1,6 +1,6 @@
 #browser.tabs-top.address-top div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   margin-left: 40px;
-  border-left: 1px solid var(--colorHighlightBg) !important;
+  border-left: 1px solid var(--colorAccentBg) !important;
 }
 
 div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
@@ -41,7 +41,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar-AddressField,
 .searchfield,
 .SearchField-Popup {
-  fill : var(--colorAccentFg) !important;
+  fill : var(--colorBackgroundFg) !important;
   color: var(--colorFgIntense);
 }
 
@@ -49,7 +49,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar-AddressField form input.url,
 .UrlBar-SearchField,
 .toolbar-mainbar .SearchField-Popup .SearchField {
-  background-color: var(--colorAccentBg) !important;
+  background-color: var(--colorBackgroundBg) !important;
   border          : none !important;
   height          : 27px !important;
 }
@@ -69,7 +69,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .UrlBar-AddressField:focus-within,
 .UrlBar-SearchField:focus-within,
 .toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
-  background-color: var(--colorAccentBgFadedMore) !important;
+  background-color: var(--colorBackgroundBgFadedMore) !important;
   border          : none !important;
   box-shadow      : none;
 }
@@ -314,12 +314,12 @@ button.button-on .bookmark-outline {
 
 .SiteInfoButton.secure,
 .SiteInfoButton.certified {
-  fill : var(--colorAccentFg) !important;
-  color: var(--colorAccentFg) !important;
+  fill : var(--colorAccentBg) !important;
+  color: var(--colorAccentBg) !important;
 }
 
 .button-addressfield.SiteInfoButton.internal svg {
-  fill        : var(--colorHighlightBg) !important;
+  fill        : var(--colorAccentBg) !important;
   padding-left: 1px;
 }
 
@@ -352,7 +352,7 @@ button.button-on .bookmark-outline {
   padding-left: 18px !important;
   margin-top  : 0px !important;
   padding-top : 5px !important;
-  color       : var(--colorAccentFg);
+  color       : var(--colorAccentBg) !important;
 }
 
 .toolbar-mainbar .searchfield-input,
@@ -368,13 +368,14 @@ button.button-on .bookmark-outline {
 
 .OmniDropdown {
   box-shadow                : none;
-  background-color          : var(--colorAccentBgFadedMore) !important;
-  color                     : var(--colorAccentFg);
-  fill                      : var(--colorAccentFg);
+  background-color          : var(--colorBg) !important;
+  color                     : var(--colorAccentBg);
+  fill                      : var(--colorAccentBg);
   border-top-left-radius    : 0px !important;
   border-top-right-radius   : 0px !important;
   border-bottom-left-radius : 10px !important;
   border-bottom-right-radius: 10px !important;
+  border-color              : var(--colorAccentBg);
 }
 
 .OmniLinkItem {
@@ -415,7 +416,7 @@ button.button-on .bookmark-outline {
 }
 
 .toolbar-extensions .HiddenToggleExtensionIcon {
-  background-color: var(--colorAccentBg) !important;
+  background-color: var(--colorBackgroundBg) !important;
 }
 
 .UrlBar-AddressField .OmniDropdown,
@@ -450,7 +451,7 @@ span.OmniLinkItem-Details {
 }
 
 .OmniLinkItem-Favicon {
-  background-color: var(--colorAccentBgFadedMore);
+  background-color: var(--colorBg);
   height          : 28px;
   width           : 28px;
   border-radius   : 100%;
@@ -581,11 +582,6 @@ progress.pageload-indicator {
   border-bottom-color: var(--colorAccentBg) !important;
 }
 
-.UrlFragment-Wrapper--ShouldHighlight {
-  --HighlightColor: var(--colorAccentFg) !important;
-  --LowlightColor : var(--colorAccentFgFaded) !important;
-}
-
 .toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large {
   height: 27px !important;
 }
@@ -621,4 +617,10 @@ progress.pageload-indicator {
 .UrlBar-AddressField>.toolbar-insideinput .button-toolbar button,
 .UrlBar-AddressField .BookmarkButton {
   border-radius: 0px !important;
+}
+
+//Prevent address bar from having odd colorings
+.UrlFragment-Wrapper--ShouldHighlight {
+    --HighlightColor  : white   !important;
+    --LowlightColor   : #8c8c8c !important;
 }
