@@ -105,11 +105,11 @@
     background-color: transparent;
 }
 
-#panels-container:not([style*="width: 0px;"])+#webview-container {
+#browser:not(.fullscreen) #panels-container:not([style*="width: 0px;"])+#webview-container {
     border-left: 1px solid var(--colorBg) !important;
 }
 
-#panels-container:not([style*="width: 0px;"])+#webview-container:before {
+#browser:not(.fullscreen) #panels-container:not([style*="width: 0px;"])+#webview-container:before {
     content         : ' ';
     position        : absolute;
     height          : 100%;
